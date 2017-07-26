@@ -33,10 +33,10 @@ environments {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             driverClassName = "com.mysql.jdbc.Driver"
             pooled = true
-            url = "jdbc:mysql://localhost:3306/CancersysTest2"
+            url = "jdbc:mysql://localhost:3306/Cancersys"
             dialect = org.hibernate.dialect.MySQL5Dialect
-            username = "Test2Testuser"
-            password = "test2"
+            username = ""
+            password = ""
 /*
             logSql = true
 */
@@ -63,7 +63,7 @@ environments {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             driverClassName = "com.mysql.jdbc.Driver"
             pooled = true
-            url = "jdbc:mysql://localhost:3306/cancersysTesting"
+            url = "jdbc:mysql://localhost:3306/CancersysTesting"
             dialect = org.hibernate.dialect.MySQL5Dialect
             username = ""
             password = ""
@@ -88,10 +88,10 @@ environments {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             driverClassName = "com.mysql.jdbc.Driver"
             pooled = true
-            url = "jdbc:mysql://localhost:3306/CancersysTest2"
+            url = "jdbc:mysql://localhost:3306/Cancersys"
             dialect = org.hibernate.dialect.MySQL5Dialect
-            username = "Test2Testuser"
-            password = "test2"
+            username = ""
+            password = ""
 //            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
 //            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
         }
