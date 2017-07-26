@@ -1,0 +1,47 @@
+{
+	"DataType":"ConceptualWorkflow",
+	"plainDescription":"Statistics on co-occuring oncogene mutations",
+	"longDescription":"This workflow provides statistics on the co-occurance or mutual exclusiveness of mutations in a user-defined gene with all other genes in the selected cohort.",
+	"sourceIdentifier":"WorkflowCooccurance",
+	"type":"AAA",
+	"InputParameters":[
+		{	
+			"identifier":"mutationSplitGene",
+			"dataType":"Gene",
+			"description":"Mutation status of gene to split the data with"
+		},
+		{
+			"identifier":"Cohort",
+			"dataType":"String",
+			"description":"The cohort to run the analysis on",
+			"predefinedValuesQuery":"Study.sourceIdentifier"
+		}
+	],
+		
+	"execWorkflows":[
+		{		
+			"description":"Statistics on co-occurance of mutations",
+			"outputFiles":{"workflow_cooccurance.csv":"csv"},
+			"ExcecutionCommands":["Rscript workflow_cooccurance.R"],
+			"VerificationCommands":["Rscript"],
+			"setFiles":["workflow_cooccurance.R"],
+
+			"inputData":[
+				{
+					"OutputFields":["ID"],
+					"parametersForQuery":{"mutationSplitGene":"mutationSplitGene","Cohort":"Cohort"},
+					"hqlQuery":"SELECT DISTINCT s.sourceIdentifier FROM DataVariationAnnotation va JOIN va.variation v JOIN v.dataset ds JOIN va.gene g JOIN ds.samples s JOIN s.tissueType t  JOIN s.patient p join p.study stud  WHERE g=:mutationSplitGene AND t.abbreviation='TP' and stud.sourceIdentifier = :Cohort",
+					"outputName":"query1.csv",
+					"name":"one"
+				},
+				{
+					"OutputFields":["ID,Chromosome,Start,End,RefAllele,AltAllele,Symbol"],
+					"parametersForQuery":{"Cohort":"Cohort"},
+					"hqlQuery":"select s.sourceIdentifier,v.chromosome,v.startPos,v.endPos,v.refAllele,v.altAllele,g.name FROM DataVariationAnnotation va JOIN va.variation v JOIN v.dataset ds JOIN va.gene g JOIN ds.samples s JOIN s.tissueType t JOIN s.patient p join p.study stud WHERE t.abbreviation='TP' and stud.sourceIdentifier = :Cohort",
+					"outputName":"query2.csv",
+					"name":"two" 
+				}
+			]
+		}
+	]
+}

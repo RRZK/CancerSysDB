@@ -1,0 +1,55 @@
+{
+	"DataType":"ConceptualWorkflow",
+	"plainDescription":"Total size of regions with genomic copy number alterations depending on mutation status",
+	"longDescription":"Our bodies are constantly attacked by intrinsic and extrinsic genotoxic factors which threaten genomic stability in our cells. The genome is maintained by a complex molecular machinery called the DNA Damage Response (DDR). Mutations of the DDR can have severe effects on genome stability and may cause cancer. The degree of genome stability can be measured by the presence of alterations of chromosomal copy number in cancer cells. This workflow can compare the overall size of amplified and deleted regions in the genome between patients with and without a mutation in a selected gene.",
+	"sourceIdentifier":"WorkflowCNAsize",
+	"type":"AAA",
+
+	"InputParameters":[
+		{	
+			"identifier":"mutationSplitGene",
+			"dataType":"Gene",
+			"description":"Mutation status of gene to split the data with"
+		},
+		{
+			"identifier":"Cohort",
+			"dataType":"String",
+			"description":"The Cohort to select",
+			"predefinedValuesQuery":"Study.sourceIdentifier"
+		}
+	],
+		
+	"execWorkflows":[
+		{		
+			"description":"Genomic copy number alterations depending on mutation status",
+			"outputFiles":{"CNAsize_output.csv":"csv","CNAsize_output.svg":"svg","CNAsize_output.pdf":"pdf"},
+			"ExcecutionCommands":["Rscript workflow_CNAsize.R"],
+			"VerificationCommands":["Rscript"],
+			"setFiles":["workflow_CNAsize.R"],
+
+			"inputData":[
+				{
+					"OutputFields":["ID"],
+					"parametersForQuery":{"Cohort":"Cohort"},
+					"hqlQuery":"SELECT DISTINCT s.sourceIdentifier FROM DataVariation v JOIN v.dataset ds JOIN ds.samples s JOIN s.tissueType t JOIN s.patient p join p.study stud WHERE t.abbreviation='TP' and stud.sourceIdentifier = :Cohort",
+					"outputName":"query1.csv",
+					"name":"one" 
+				},
+				{
+					"OutputFields":["ID"],
+					"parametersForQuery":{"mutationSplitGene":"mutationSplitGene","Cohort":"Cohort"},
+					"hqlQuery":"SELECT DISTINCT s.sourceIdentifier FROM DataVariationAnnotation va JOIN va.variation v JOIN v.dataset ds JOIN va.gene g JOIN ds.samples s JOIN s.tissueType t  JOIN s.patient p join p.study stud  WHERE g=:mutationSplitGene AND t.abbreviation='TP' and stud.sourceIdentifier = :Cohort",
+					"outputName":"query2.csv",
+					"name":"two"
+				},
+				{
+					"OutputFields":["ID","StudyName","Chromosome","startPos","endPos","CN"],
+					"parametersForQuery":{"Cohort":"Cohort"},
+					"hqlQuery":"SELECT s.label,stud.description,cn.chromosome,cn.startPos,cn.endPos,cn.copyNumber FROM DataCopynumber cn JOIN cn.dataset ds JOIN ds.samples s JOIN s.tissueType tt JOIN s.patient p join p.study stud WHERE tt.abbreviation= 'TP' and stud.sourceIdentifier = :Cohort",
+					"outputName":"query3.csv",
+					"name":"three"
+				}
+			]
+		}
+	]
+}

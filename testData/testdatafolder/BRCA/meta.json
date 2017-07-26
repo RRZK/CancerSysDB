@@ -1,0 +1,39 @@
+{
+  "General":{
+    "DataProvider":"TCGA",
+    "Origin":"http://www.tcga.gov",
+    "Description":"This is Stuff from the TCGA we Processed with the XYZ Tool!",
+    "DataType":"Variation",
+    "TCGALogic":true,
+    "ContextsPath":"../biospecs",
+    "Annon":true,
+    "Contexts":[
+      {
+        "Barcode":"TCGA-A704-A03"
+      },
+
+      {
+        "Barcode":"TCGA-A704-A30"
+      }
+    ]
+  },
+  "Special":{
+    "test1.trimmed.annotated.gene.quantification.txt":{
+      "Description":"This file is special, not like all the other files",
+      "DataType":"TranscriptAbundance",
+      "NoGeneralContexts":true,
+      "Annon":false,
+      "Contexts":[{
+        "Barcode":"TCGA-A994-C04"
+      },
+        {
+          "Barcode":"FRANK-09TTadaC04",
+          "Pseudonyme":"FRANK",
+          "TCGALogic":false,
+          "Cancertype":"BCRA",
+          "TissueType":"TP",
+          "Study":"A Guy called himself \"Frank\" gave us this Sample"
+        }]
+    }
+  }
+}

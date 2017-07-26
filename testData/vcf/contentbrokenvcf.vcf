@@ -1,0 +1,8 @@
+##fileformat=VCFv4.2
+##FORMAT=<ID=GT,Number=1,Type=Integer,Description="Genotype">
+##FORMAT=<ID=GP,Number=G,Type=Float,Description="GenotypetProbabilities">
+##FORMAT=<ID=PL,Number=G,Type=Float,Description="Phred-scaledtGenotypetLikelihoods">
+#CHROM    POS    ID    REF    AL        QUAL    FIL    ER    INFO    FORMA        SAMP001    SAMP002
+20    1291018    rs11449    G    A    .;;//    PAasdSS    .    G        0/0    0/1
+20    2300608    rs84825            .    PASS    .    G    :GP    0/1:.    0/1:0.03,0.97,0    sdasda    1002.33
+20    G    .    PASS    .    G    :PL    ./.:.    1/1:10,5,0

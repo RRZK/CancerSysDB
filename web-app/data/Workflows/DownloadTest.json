@@ -1,0 +1,40 @@
+{
+  "DataType":"ConceptualWorkflow",
+  "plainDescription": "Test Download",
+  "longDescription":"Test Download . DONT FORGET TO Upload A FILE TO DataRandomForestClassifier first! !!!!!",
+  "sourceIdentifier": "DownloadTest",
+  "type" :"AAAA",
+  "outputFilesOrder":["binfile.obj"],
+
+  "InputParameters":[
+    {
+      "identifier": "DatasetID",
+      "dataType":"Long",
+      "description": "The Id of the Dataset that contains a File to Download"
+    }
+  ],
+
+  "execWorkflows":[
+    {
+      "description":"get The binfile from the Database...",
+      "outputFiles":{"binfile.obj":"obj"},
+
+      "ExcecutionCommands":[],
+      "VerificationCommands":[],
+      "setFiles":[],
+      "inputData": [
+        {
+          "binaryFile":true,
+          "OutputFields":["thing.classifierFile"],
+          "hqlQuery":"SELECT thing.classifierFile FROM DataRandomForestClassifier thing JOIN thing.dataset ds where ds.id=:DatasetID",
+          "outputName":"binfile.obj",
+          "name":"one",
+          "parametersForQuery":{"DatasetID":"DatasetID"}
+
+        }
+      ]
+    }
+
+  ]
+
+}

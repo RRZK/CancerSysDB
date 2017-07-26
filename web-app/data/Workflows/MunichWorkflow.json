@@ -1,0 +1,208 @@
+{
+  "DataType":"MunichWorkflow",
+  "plainDescription": "Visualisation of expression and mutation status of mitochondrial genes",
+  "longDescription":"This is an interactive visualisation tool for the display of expression and mutation status of mitochondrial genes of selected tumor-normal paired samples. It allows detailed inspection of expression and mutation data of samples and comparisons among them. Users could choose up to 6 tumor-normal pairs, either from the users’ or TCGA cohort. Data are displayed in a bee-swarm scatter plot according to log 2 fold change of expression level (tumor over normal), with each point corresponding to one mitochondrial gene. Users could interact with the tool to display mutation data (Type, position, allele) for each gene, and refine the output according to mitochondrial functions.",
+  "sourceIdentifier": "MunichWorkflow",
+  "type" :"AAAA",
+  "InputParameters":[
+    {
+      "identifier": "PatientID1",
+      "dataType":"String",
+      "description": "Selected patient for comparison"
+    },
+    {
+      "identifier": "PatientID2",
+      "dataType":"String",
+      "description": "Selected patient for comparison"
+    },
+    {
+      "identifier": "PatientID3",
+      "dataType":"String",
+      "description": "Selected patient for comparison",
+      "optional":true
+    },
+    {
+      "identifier": "PatientID4",
+      "dataType":"String",
+      "description": "Selected patient for comparison",
+      "optional":true
+    },
+    {
+      "identifier": "PatientID5",
+      "dataType":"String",
+      "description": "Selected patient for comparison",
+      "optional":true
+    },
+    {
+      "identifier": "PatientID6",
+      "dataType":"String",
+      "description": "Selected patient for comparison",
+      "optional":true
+    }
+  ],
+
+  "execWorkflows":[
+    {
+      "description":"expression and mutation status of mitochondrial genes of selected patients and Combining individual files for visualization",
+      "outputFiles":{"viz.html":"html","Logic.js":"js","data.csv":"csv"},
+      "ExcecutionCommands":["python combine.py"],
+      "VerificationCommands":[],
+      "setFiles":["viz.html","combine.py"],
+      "inputData": [
+
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier, g.name , gFunct.process, tde.foldChange, 'NULL' from Patient p  left join p.samples s left join s.datasets ds left join ds.dataTranscriptDiffExpr tde left join tde.gene g left join g.functions gFunct left join gFunct.dataset gfds WHERE  p.sourceIdentifier = :patient and ds is not null and gFunct is not null and gfds.note=  'genes associated to mitochondria'",
+          "outputName":"patient1.csv",
+          "name":"one",
+          "parametersForQuery":{"patient":"PatientID1"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "func",  "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier , g.name , gf.process, CONCAT('chr',g.chromosome,' ',g.startPos,' ',dv.refAllele,'/',dv.altAllele ) from Patient p LEFT join p.samples dvsamp  LEFT join dvsamp.datasets ds  LEFT join ds.dataVariation dv LEFT join dv.annotations dva LEFT join dva.gene g LEFT join g.functions gf LEFT join gf.dataset gfds where gfds.note='genes associated to mitochondria' AND p.sourceIdentifier= :patient ",
+          "outputName":"PartOneMutation1.csv",
+          "name":"firstonemut",
+          "parametersForQuery":{"patient":"PatientID1"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "value"],
+          "hqlQuery":"select distinct p.sourceIdentifier , g.name ,tde.foldChange from  Patient p LEFT join p.samples dvsamp LEFT join dvsamp.datasets ds LEFT join ds.dataTranscriptDiffExpr tde LEFT join tde.gene g LEFT join g.functions gf LEFT join gf.dataset gfds where gfds.note='genes associated to mitochondria' AND p.sourceIdentifier= :patient ",
+          "outputName":"PartTwoMutation1.csv",
+          "name":"secondonemut",
+          "parametersForQuery":{"patient":"PatientID1"}
+
+        },
+
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier, g.name , gFunct.process, tde.foldChange, 'NULL' from Patient p  left join p.samples s left join s.datasets ds left join ds.dataTranscriptDiffExpr tde left join tde.gene g left join g.functions gFunct left join gFunct.dataset gfds WHERE  p.sourceIdentifier = :patient and ds is not null and gFunct is not null and gfds.note=  'genes associated to mitochondria'",
+          "outputName":"patient2.csv",
+          "name":"two",
+          "parametersForQuery":{"patient":"PatientID2"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "func",  "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier , g.name , gf.process, CONCAT('chr',g.chromosome,' ',g.startPos,' ',dv.refAllele,'/',dv.altAllele ) from Patient p LEFT join p.samples dvsamp  LEFT join dvsamp.datasets ds  LEFT join ds.dataVariation dv LEFT join dv.annotations dva LEFT join dva.gene g LEFT join g.functions gf LEFT join gf.dataset gfds where gfds.note='genes associated to mitochondria' AND p.sourceIdentifier= :patient ",
+          "outputName":"PartOneMutation2.csv",
+          "name":"firsttwomut",
+          "parametersForQuery":{"patient":"PatientID2"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "value"],
+          "hqlQuery":"select distinct p.sourceIdentifier , g.name ,tde.foldChange from  Patient p LEFT join p.samples dvsamp LEFT join dvsamp.datasets ds LEFT join ds.dataTranscriptDiffExpr tde LEFT join tde.gene g LEFT join g.functions gf LEFT join gf.dataset gfds where gfds.note='genes associated to mitochondria' AND p.sourceIdentifier= :patient ",
+          "outputName":"PartTwoMutation2.csv",
+          "name":"secondtwomut",
+          "parametersForQuery":{"patient":"PatientID2"}
+
+        },
+
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier, g.name , gFunct.process, tde.foldChange, 'NULL' from Patient p  left join p.samples s left join s.datasets ds left join ds.dataTranscriptDiffExpr tde left join tde.gene g left join g.functions gFunct left join gFunct.dataset gfds WHERE  p.sourceIdentifier = :patient and ds is not null and gFunct is not null and gfds.note=  'genes associated to mitochondria'",
+          "outputName":"patient3.csv",
+          "name":"three",
+          "parametersForQuery":{"patient":"PatientID3"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "func",  "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier , g.name , gf.process, CONCAT('chr',g.chromosome,' ',g.startPos,' ',dv.refAllele,'/',dv.altAllele ) from Patient p LEFT join p.samples dvsamp  LEFT join dvsamp.datasets ds  LEFT join ds.dataVariation dv LEFT join dv.annotations dva LEFT join dva.gene g LEFT join g.functions gf LEFT join gf.dataset gfds where gfds.note='genes associated to mitochondria' AND p.sourceIdentifier= :patient ",
+          "outputName":"PartOneMutation3.csv",
+          "name":"firstthreemut",
+          "parametersForQuery":{"patient":"PatientID3"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "value"],
+          "hqlQuery":"select distinct p.sourceIdentifier , g.name ,tde.foldChange from  Patient p LEFT join p.samples dvsamp LEFT join dvsamp.datasets ds LEFT join ds.dataTranscriptDiffExpr tde LEFT join tde.gene g LEFT join g.functions gf LEFT join gf.dataset gfds where gfds.note='genes associated to mitochondria' AND p.sourceIdentifier= :patient ",
+          "outputName":"PartTwoMutation3.csv",
+          "name":"secondthreemut",
+          "parametersForQuery":{"patient":"PatientID3"}
+
+        },
+
+
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier, g.name , gFunct.process, tde.foldChange, 'NULL' from Patient p  left join p.samples s left join s.datasets ds left join ds.dataTranscriptDiffExpr tde left join tde.gene g left join g.functions gFunct left join gFunct.dataset gfds WHERE  p.sourceIdentifier = :patient and ds is not null and gFunct is not null and gfds.note=  'genes associated to mitochondria'",
+          "outputName":"patient4.csv",
+          "name":"four",
+          "parametersForQuery":{"patient":"PatientID4"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "func",  "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier , g.name , gf.process, CONCAT('chr',g.chromosome,' ',g.startPos,' ',dv.refAllele,'/',dv.altAllele ) from Patient p LEFT join p.samples dvsamp  LEFT join dvsamp.datasets ds  LEFT join ds.dataVariation dv LEFT join dv.annotations dva LEFT join dva.gene g LEFT join g.functions gf LEFT join gf.dataset gfds where gfds.note='genes associated to mitochondria' AND p.sourceIdentifier= :patient ",
+          "outputName":"PartOneMutation4.csv",
+          "name":"firstfourmut",
+          "parametersForQuery":{"patient":"PatientID4"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "value"],
+          "hqlQuery":"select distinct p.sourceIdentifier , g.name ,tde.foldChange from  Patient p LEFT join p.samples dvsamp LEFT join dvsamp.datasets ds LEFT join ds.dataTranscriptDiffExpr tde LEFT join tde.gene g LEFT join g.functions gf LEFT join gf.dataset gfds where gfds.note='genes associated to mitochondria' AND p.sourceIdentifier= :patient ",
+          "outputName":"PartTwoMutation4.csv",
+          "name":"secondfourmut",
+          "parametersForQuery":{"patient":"PatientID4"}
+
+        },
+
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier, g.name , gFunct.process, tde.foldChange, 'NULL' from Patient p  left join p.samples s left join s.datasets ds left join ds.dataTranscriptDiffExpr tde left join tde.gene g left join g.functions gFunct left join gFunct.dataset gfds WHERE  p.sourceIdentifier = :patient and ds is not null and gFunct is not null and gfds.note=  'genes associated to mitochondria'",
+          "outputName":"patient5.csv",
+          "name":"five",
+          "parametersForQuery":{"patient":"PatientID5"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "func",  "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier , g.name , gf.process, CONCAT('chr',g.chromosome,' ',g.startPos,' ',dv.refAllele,'/',dv.altAllele ) from Patient p LEFT join p.samples dvsamp  LEFT join dvsamp.datasets ds  LEFT join ds.dataVariation dv LEFT join dv.annotations dva LEFT join dva.gene g LEFT join g.functions gf LEFT join gf.dataset gfds where gfds.note='genes associated to mitochondria' AND p.sourceIdentifier= :patient ",
+          "outputName":"PartOneMutation5.csv",
+          "name":"firstfivemut",
+          "parametersForQuery":{"patient":"PatientID5"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "value"],
+          "hqlQuery":"select distinct p.sourceIdentifier , g.name ,tde.foldChange from  Patient p LEFT join p.samples dvsamp LEFT join dvsamp.datasets ds LEFT join ds.dataTranscriptDiffExpr tde LEFT join tde.gene g LEFT join g.functions gf LEFT join gf.dataset gfds where gfds.note='genes associated to mitochondria' AND p.sourceIdentifier= :patient ",
+          "outputName":"PartTwoMutation5.csv",
+          "name":"secondfivemut",
+          "parametersForQuery":{"patient":"PatientID5"}
+
+        },
+
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier, g.name , gFunct.process, tde.foldChange, 'NULL' from Patient p  left join p.samples s left join s.datasets ds left join ds.dataTranscriptDiffExpr tde left join tde.gene g left join g.functions gFunct left join gFunct.dataset gfds WHERE  p.sourceIdentifier = :patient and ds is not null and gFunct is not null and gfds.note=  'genes associated to mitochondria'",
+          "outputName":"patient6.csv",
+          "name":"six",
+          "parametersForQuery":{"patient":"PatientID6"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "func",  "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier , g.name , gf.process, CONCAT('chr',g.chromosome,' ',g.startPos,' ',dv.refAllele,'/',dv.altAllele ) from Patient p LEFT join p.samples dvsamp  LEFT join dvsamp.datasets ds  LEFT join ds.dataVariation dv LEFT join dv.annotations dva LEFT join dva.gene g LEFT join g.functions gf LEFT join gf.dataset gfds where gfds.note='genes associated to mitochondria' AND p.sourceIdentifier= :patient ",
+          "outputName":"PartOneMutation6.csv",
+          "name":"firstsixmut",
+          "parametersForQuery":{"patient":"PatientID6"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "value"],
+          "hqlQuery":"select distinct p.sourceIdentifier , g.name ,tde.foldChange from  Patient p LEFT join p.samples dvsamp LEFT join dvsamp.datasets ds LEFT join ds.dataTranscriptDiffExpr tde LEFT join tde.gene g LEFT join g.functions gf LEFT join gf.dataset gfds where gfds.note='genes associated to mitochondria' AND p.sourceIdentifier= :patient ",
+          "outputName":"PartTwoMutation6.csv",
+          "name":"secondsixmut",
+          "parametersForQuery":{"patient":"PatientID6"}
+
+        }
+      ]
+    }
+
+  ]
+
+}

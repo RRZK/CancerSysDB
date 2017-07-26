@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bio:tcga_bcr xsi:schemaLocation="http://tcga.nci/bcr/xml/biospecimen/2.6 http://tcga-data.nci.nih.gov/docs/xsd/BCR/tcga.nci/bcr/xml/biospecimen/2.6/TCGA_BCR.Biospecimen.xsd" schemaVersion="2.6" xmlns:bio="http://tcga.nci/bcr/xml/biospecimen/2.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:admin="http://tcga.nci/bcr/xml/administration/2.6" xmlns:shared="http://tcga.nci/bcr/xml/clinical/shared/2.6">
+    <admin:admin>
+        <admin:bcr>Test</admin:bcr>
+        <admin:project_code >Testproj</admin:project_code>
+        <admin:disease_code >BRCA</admin:disease_code>
+    </admin:admin>
+    <bio:patient>
+        <shared:bcr_patient_barcode >Testproj-A2-03FX</shared:bcr_patient_barcode>
+         <bio:samples>
+            <bio:sample>
+                <bio:sample_type >Primary solid Tumor</bio:sample_type>
+                <bio:bcr_sample_barcode >Testproj-A2-01FX-03A</bio:bcr_sample_barcode>
+            </bio:sample>
+            <bio:sample>
+                <bio:sample_type >Blood Derived Normal</bio:sample_type>
+                <bio:bcr_sample_barcode >Testproj-A2-01FX-30A</bio:bcr_sample_barcode>
+            </bio:sample>
+        </bio:samples>
+    </bio:patient>
+</bio:tcga_bcr>

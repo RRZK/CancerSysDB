@@ -1,0 +1,11 @@
+.ReportDiv{
+    height:20rem;
+    overflow:auto;
+
+}
+
+
+.resultTableContainer td {
+    padding: 3px;
+    border: 1px solid black;
+}

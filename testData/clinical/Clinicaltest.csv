@@ -1,0 +1,10 @@
+Patient;Key;Value
+Testproj-A2-A3FX;First Thing In File;Its There!
+Testproj-A2-A3FX;bcr;TestData
+Testproj-A2-A3FX;file_uuid;XXX-XXX-XX-XXX-XXX
+Testproj-A2-A3FX;project_code;TCGA
+Testproj-A2-A3FX;disease_code;BRCA
+Testproj-A2-A3FX;tumor_tissue_site;Breast
+Testproj-A2-A3FX;bcr_patient_barcode;Testproj-A2-A3FX
+Testproj-A2-A3FX;CSV Testfile;True
+Testproj-A2-A3FX;Last Thing In File;Its There!

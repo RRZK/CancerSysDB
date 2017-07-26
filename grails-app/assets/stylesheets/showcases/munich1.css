@@ -1,0 +1,35 @@
+body {
+    font: 10px verdana;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    width: 300px;
+    height: 55px;
+    padding: 6px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 2px;
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+.title {
+    font: 12px verdana;
+}
+
+.SPtitle {
+    font: 12px verdana;
+}
+
+.legend {
+    font: 12px verdana;
+}

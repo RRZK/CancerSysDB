@@ -1,0 +1,34 @@
+{
+  "plainDescription": "Test Parameter to file",
+  "longDescription":"Simple Workflow to put parameter to file",
+  "sourceIdentifier": "ListInputTest",
+  "InputParameters":[
+    {
+      "identifier": "TestList",
+      "dataType":"List",
+      "description": "A String based list of Things Imported"
+    }
+  ],
+
+  "execWorkflows":[
+    {
+      "description":"Write Input List To File",
+      "outputFiles":{"parameterAsCsv.csv":"csv"},
+      "ExcecutionCommands":[],
+      "VerificationCommands":[],
+      "setFiles":[],
+      "inputData": [
+        {
+          "OutputFields":["Headline"],
+          "parameterToFile":true,
+          "outputName":"parameterAsCsv.csv",
+          "name":"ParamToFile",
+          "parametersForQuery":{"TestList":"TestList"}
+
+        }
+      ]
+    }
+
+  ]
+
+}

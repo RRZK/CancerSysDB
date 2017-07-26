@@ -1,0 +1,58 @@
+{
+  "DataType":"ConceptualWorkflow",
+  "plainDescription": "Gene expression/copy number depending on mutation status",
+  "longDescription":"Somatic mutations can severely impact the transcriptional activity of the genome, for instance if they occur in regulatory elements which alter gene expression. In this analysis tool, users can choose arbitrary cohorts from the CancerSysDB and profile gene expression or somatic copy number alterations of a specific gene depending on the mutation status of a different gene. Data are shown in a barplot across patients split into the cohorts selected. Furthermore, the differences in gene expression or somatic copy numbers between mutated an non-mutated patients are evaluated by a statistical test.",
+  "sourceIdentifier": "CologneWorkflow",
+  "type" :"AAAA",
+  "outputFilesOrder":["showcase1_output.svg","showcase1_output.pdf","showcase1_output.csv"],
+
+  "InputParameters":[
+    {
+      "identifier": "expressionGene",
+      "dataType":"Gene",
+      "description": "expression of gene to compare to"
+    },
+    {
+      "identifier": "mutationSplitGene",
+      "dataType":"Gene",
+      "description": "mutation status of Gene to Split data with"
+    }
+  ],
+
+  "execWorkflows":[
+    {
+      "description":"Gene expression/copy number depending on mutation status",
+      "outputFiles":{"showcase1_output.svg":"svg","showcase1_output.pdf":"pdf","showcase1_output.csv":"csv"},
+
+      "ExcecutionCommands":["Rscript showcase1_analysis.R"],
+      "VerificationCommands":["Rscript"],
+      "setFiles":["showcase1_analysis.R"],
+      "inputData": [
+        {
+          "OutputFields":["id","label","tumor_type","name","foldChange" ],
+          "hqlQuery":"select s.id as id, p.sourceIdentifier as label, cancerType.abbreviation as tumor_type, g.name as name, a.foldChange as foldChange from DataTranscriptDiffExpr a join a.dataset ds join ds.samples s join s.patient p join a.gene g join s.tissueType tissueClass join s.cancerType cancerType where tissueClass.abbreviation= 'TP' and g= :expressionGene",
+          "outputName":"query1.csv",
+          "name":"one",
+          "parametersForQuery":{"expressionGene":"expressionGene"}
+
+        },
+        {
+          "OutputFields":["id"],
+          "hqlQuery":"select distinct s.sourceIdentifier from DataVariation v join v.dataset ds join ds.samples s join s.tissueType tissueClass WHERE tissueClass.abbreviation= 'TP'",
+          "outputName":"query2.csv",
+          "name":"two"
+
+        },
+        {
+          "OutputFields":["id","study" ],
+          "parametersForQuery":{"mutationSplitGene":"mutationSplitGene"},
+          "hqlQuery":"select distinct s.sourceIdentifier, stud.description from DataVariationAnnotation va join va.variation v join v.dataset ds join va.gene g join ds.samples s join s.tissueType tissueClass join s.patient p join p.study stud where g= :mutationSplitGene and tissueClass.abbreviation= 'TP'",
+          "outputName":"query3.csv",
+          "name":"three"
+        }
+      ]
+    }
+
+  ]
+
+}

@@ -1,0 +1,34 @@
+version: "2.0"
+
+services:
+  csysmariadb:
+     container_name: CancersysMariaDB
+     image: mariadb:10.3
+     environment:
+       MYSQL_USER: csysUser
+       MYSQL_PASSWORD: csysPassword
+       MYSQL_DATABASE: cancersys
+       MYSQL_ROOT_PASSWORD: csysRootPW
+     ports:
+       - "3306"
+     volumes:
+       - ./csys-mariadb/release1/:/docker-entrypoint-initdb.d/
+     networks:
+       - csysnetwork
+
+  cancersys:
+     container_name: Cancersys
+     build:
+       context: ./openImage
+       dockerfile: Dockerfile
+     networks:
+       - csysnetwork
+     links:
+       - csysmariadb
+     ports:
+       - "8075:8080"
+
+
+networks:
+    csysnetwork:
+        driver: bridge

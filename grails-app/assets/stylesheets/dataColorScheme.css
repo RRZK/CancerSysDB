@@ -1,0 +1,25 @@
+table caption {
+    font-size: 1.1rem;
+}
+.genedata  {
+    background-color: #7C996E;
+
+}
+
+
+
+.geneticdata {
+    background-color: #C0DAB3;
+
+}
+
+
+.structuraldata  {
+    background-color: #FFFE6B;
+
+}
+
+.clinicaldata  {
+    background-color: #BCAAFF;
+
+}

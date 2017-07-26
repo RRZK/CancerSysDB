@@ -1,0 +1,552 @@
+h1. Workflows
+
+
+
+Workflows are the Backbone of the Database. In this Description we Define them by the Example Workflow by the Cologne Based group Around Peter Frommolt.
+
+A workflow has mayor Functions:
+
+* Define Prametrized Queries to retrive Data from the Database
+** Define Parameters the user can choose to individualize the Queries on the Database from a Frontend in a Controlled way.
+** Define the Queries to get a subset of data, defined on Funcional Usage
+* Define Processing in the Form of Scripts for Conversion, Analysis and Visualisation
+* Define Output files as A Result Resport of the Workflows.
+
+h2. Technical Makeup
+
+A Workflow is described by two main Components.
+
+* The Description of the Workflow as Json File
+* The Workflow Executable script files zipped.
+
+h3. Description of the Workflow as Json File
+
+The Workflow as Json Files Defines Important concepts
+
+* The Workflow in General
+* The parameters the User can set via Frontend ("InputParameters")
+* The Exec Workflows which is a collection of Scripts Executed
+** There are Queries defied which retrive data from the Database and puts it into CSV Files for Scripts
+** There are Executable Workflows definedlike Rscripts wich use the Data retrived from the Database ("ExcecutionCommands")
+** There are Output files defined as Results of teh Execution ("outputFiles")
+
+h4. Main Fields:
+
+
+{code:json}
+  "DataType":"ConceptualWorkflow"
+  "type" :"AAAA"
+{code}
+
+For historical reasons these few fields  have to be filled out in this way. This will probably change due to development and refactoring.
+
+
+{code:json}
+ "plainDescription": "Gene expression/copy number depending on mutation status",
+{code}
+
+
+a short description of the Workflow
+
+{code:json}
+  "longDescription":"Somatic mutations can severely impact the transcriptional activity of the genome, for instance if they occur in regulatory elements which alter gene expression. In this analysis tool, users can choose arbitrary cohorts from the CancerSysDB and profile gene expression or somatic copy number alterations of a specific gene depending on the mutation status of a different gene. Data are shown in a barplot across patients split into the cohorts selected. Furthermore, the differences in gene expression or somatic copy numbers between mutated an non-mutated patients are evaluated by a statistical test.",
+{code}
+
+a Long description of the Workflow. _Warning_ If you format the Long description, this could break the JSON Syntax
+
+
+{code:json}
+ "sourceIdentifier": "CologneWorkflow",
+{code}
+
+An Identifier to Identify the Workflow by:
+
+h4. Input Paramers:
+
+The field takes complex values:
+
+ "InputParameters"
+
+The Input Parameters describe the Parameteres the user can choose.
+
+This is a List of Objects each object contains a Parameter which will result in an dialog input on Workflow Execution.
+
+
+Example 1:
+{code:json}
+  "InputParameters":[
+    {
+      "identifier": "expressionGene",
+      "dataType":"Gene",
+      "description": "expression of gene to compare to"
+    },
+    {
+      "identifier": "mutationSplitGene",
+      "dataType":"Gene",
+      "description": "mutation status of Gene to Split data with"
+    }
+  ]
+{code}
+
+
+Example 2:
+{code:json}
+    {
+      "identifier": "PatientID1",
+      "dataType":"String",
+      "description": "Selected patient for comparison"
+    },
+{code}
+
+A single Input parameter consists of three fields:
+
+  "identifier"
+
+This name can re-apeare in the and will describe the value of the parameter for the whole workflow.
+
+  "dataType"
+
+The Datatype desribes the stored value Type. This can be a Basic datatype like a Float, Integer and String (following Java Naming convention http://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html   ) or a Gene. More Things may follow, but must be defined in the Sourcecode.
+
+  "description"
+
+Describes the Function of the Parameter in a Human readable way.
+
+ "optional"
+
+Marks if an Input Parameter is Required. It takes true or false (Json Boolean Values). If left out parameters are assumed tobe required NOT optional!
+
+h3. execWorkflows
+
+An Excec Workflow defines a special logic or Script which is run on the Command line to produce output.
+
+The Field _execWorkflows_ takes a List of those executed in a row. If the First fails the be execution will stop and the Workflow execution has failed.
+
+Example 1
+
+{code:json}
+{
+      "description":"Gene expression/copy number depending on mutation status",
+      "outputFiles":{"showcase1_output.csv":"csv","showcase1_output.pdf":"pdf","showcase1_output.svg":"svg"},
+      "ExcecutionCommands":["Rscript showcase1_analysis.R"],
+      "VerificationCommands":["Rscript"],
+      "setFiles":["showcase1_analysis.R"],
+
+      "inputData": [
+
+        {
+          "OutputFields":["id","label","tumor_type","name","fpkm" ],
+          "hqlQuery":"select s.id as id, p.sourceIdentifier as label, cancerType.abbreviation as tumor_type, g.name as name, a.fpkm as fpkm from DataTranscriptAbundance a join a.dataset ds join ds.samples s join s.patient p join a.gene g join s.tissueType tissueClass join s.cancerType cancerType where tissueClass.abbreviation= 'TP' and g= :expressionGene",
+          "outputName":"query1.csv",
+          "name":"one",
+          "parametersForQuery":{"expressionGene":"expressionGene"}
+
+        },
+        {
+          "OutputFields":["id"],
+          "hqlQuery":"select distinct s.sourceIdentifier from DataVariation v join v.dataset ds join ds.samples s join s.tissueType tissueClass WHERE tissueClass.abbreviation= 'TP'",
+          "outputName":"query2.csv",
+          "name":"two"
+
+        },
+        {
+          "OutputFields":["id","study" ],
+          "parametersForQuery":{"mutationSplitGene":"mutationSplitGene"},
+          "hqlQuery":"select distinct s.sourceIdentifier, stud.description from DataVariationAnnotation va join va.variation v join v.dataset ds join va.gene g join ds.samples s join s.tissueType tissueClass join s.patient p join p.study stud where g= :mutationSplitGene and tissueClass.abbreviation= 'TP'",
+          "outputName":"query3.csv",
+          "name":"three"
+        }
+
+
+
+      ]
+    }
+{code}
+
+
+Example 2
+
+{code:json}
+    {
+      "description":"expression and mutation status of mitochondrial genes of selected patients and Combining individual files for visualization",
+      "outputFiles":{"viz.html":"html","Logic.js":"js","data.csv":"csv"},
+      "ExcecutionCommands":["python combine.py"],
+      "VerificationCommands":[],
+      "setFiles":["viz.html","combine.py"],
+      "inputData": [
+
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier, gf.gene.name , gf.process, tde.foldChange, 'NULL' from DataGeneticFunction gf, DataTranscriptDiffExpr tde  join tde.dataset ds join ds.samples samp join samp.patient p join gf.dataset dsGF  WHERE gf.gene = tde.gene and p.sourceIdentifier = :patient and dsGF.note='genes associated to mitochondria'",
+          "outputName":"patient1.csv",
+          "name":"one",
+          "parametersForQuery":{"patient":"PatientID1"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier , gf.gene.name , gf.process, tde.foldChange,CONCAT('chr',gf.gene.chromosome,' ',gf.gene.startPos,' ',dv.refAllele,'/',dv.altAllele ) from DataGeneticFunction gf, DataTranscriptDiffExpr tde, DataVariationAnnotation dva join dva.variation dv  join tde.dataset ds join ds.samples samp join samp.patient p join dv.dataset dvds join dvds.samples dvsamp join dvsamp.patient dvp where gf.gene = tde.gene and dva.gene = tde.gene and p.sourceIdentifier  =dvp.sourceIdentifier  and p.sourceIdentifier= :patient",
+          "outputName":"patientMutation1.csv",
+          "name":"onemut",
+          "parametersForQuery":{"patient":"PatientID1"}
+
+        }
+}
+{code}
+
+h5. Fields
+
+ "ExcecutionCommands"
+
+List of Commands Executed on the Commandline
+In this case an Rscript is called, it uses the created fields
+
+ "VerificationCommands"
+
+The verifications commands is a list of commands executed on the Commandline to check if everything is configured and installed on the Server.
+
+In this example: Is _R_ or the Rscript command-line tool installed!
+
+ "outputFiles"
+
+Output Files is a Map of Filesnames created by the Workflow.
+
+ "setFiles"
+
+
+The Files Important for executing the Workflow, they must be included in the ZIP file!
+
+in this example the R-Script.
+
+h4. inputData
+
+
+Example 1:
+{code:json}
+        {
+          "OutputFields":["id","label","tumor_type","name","fpkm" ],
+          "hqlQuery":"select s.id as id, p.sourceIdentifier as label, cancerType.abbreviation as tumor_type, g.name as name, a.fpkm as fpkm from DataTranscriptAbundance a join a.dataset ds join ds.samples s join s.patient p join a.gene g join s.tissueType tissueClass join s.cancerType cancerType where tissueClass.abbreviation= 'TP' and g= :expressionGene",
+          "outputName":"query1.csv",
+          "name":"one",
+          "parametersForQuery":{"expressionGene":"expressionGene"}
+
+        }
+{code}
+
+Example 2:
+{code:json}
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier, gf.gene.name , gf.process, tde.foldChange, 'NULL' from DataGeneticFunction gf, DataTranscriptDiffExpr tde  join tde.dataset ds join ds.samples samp join samp.patient p join gf.dataset dsGF  WHERE gf.gene = tde.gene and p.sourceIdentifier = :patient and dsGF.note='genes associated to mitochondria'",
+          "outputName":"patient1.csv",
+          "name":"one",
+          "parametersForQuery":{"patient":"PatientID1"}
+
+        }
+
+{code}
+  "OutputFields"
+
+All the fields in the Resulting CSV File
+
+ "hqlQuery"
+
+the HQL-Query is a Database Query. It underlies special Rules
+
+
+ "outputName"
+
+The Name of the File tobe created
+
+ "name"
+
+The Workflow Internal Name.
+
+ "parametersForQuery"
+
+The Parameters Used by the Database.
+
+h3. Description Zip File
+
+For all the Files which must be inside this zip see the "setFiles" Parameter in the Exec Workflows.
+
+h3. HQL Queries
+
+The HQL Queries are used to take advantage of the Hibernate abstraction Layer in the Backend of Grails. They should only be used by privileged users like admins. They also have to be defined to get data from the Database.
+
+https://docs.jboss.org/hibernate/orm/3.3/reference/en/html/queryhql.html
+
+There is a Test interface for HQL Queries in the Admin Interface.
+
+HQL queries are very similiar to Standard SQL. They support the Naming conventions of the Dataclasses in the Grails Backend (Domain Classes).
+
+h4. best practice
+
+To Implement a successful queries some things have tobe taken in mind.
+
+h5. _Data_ first then Join the _Dataset_
+
+The HQL Queries need to start at some point. This is genrally a Datatype. from there the Dataset must be joined because there is no way of Joining from a Dataset to the Data. So Start with The DataType you want to use an join to the Dataset. The Dataset must be contained for security reasons.
+
+_example_:
+
+ {code:sql}
+select * from DataVariation dv join dv.dataset ds join ds.sample sp ....
+{code}
+
+Here DataVariation is used in the Querie. Then the Dataset _ds_ is joined, then the Samples (_sp_) etc.
+
+This restriction a Design flaw. To let the Database be extensible a Datatype has to link to the dataset. a harwired list of reference table of Links from the Dataset to the Datatypes would.
+
+h5. Joining Clinical Data
+
+To join clinincal Patient Data is important in some Workflows. The Patient Data is Attached to the Patient Dataset. There is a step between a Clinical Datum and the Patient, its called importInfo . This step refelcts the Origin the Patient Data is from. It resembles a Datarestriction point.
+
+
+{code:sql}
+
+ds.samples sp join sp.patient pt join pt.importInfos ii join ii.infos ci where ci.exactName = 'days_to_death'
+
+{code}
+
+This Join String shows how importInfos _ii_ are Joined to the Data. After Joining the ImportInfo the Key/Values Clinical Data is Joined: join ii.infos ci
+
+In the Where clase the Datum can be Adressed by Filtering by Key _ci.exactName_ the Value is Stored in the Field _value_
+
+
+h4. Security
+
+In genereal the Frontend accessable Contetors to the HQL execution levels are Read only(Only select statements).
+
+The queries _MUST_ contain "_Dataset ds_" in the Querie to check user rights and Add them to the query statement.
+
+h2. The Full Description of the Cologne Workflow
+
+{code:json}
+{
+  "DataType":"ConceptualWorkflow",
+  "plainDescription": "Gene expression/copy number depending on mutation status",
+  "longDescription":"Somatic mutations can severely impact the transcriptional activity of the genome, for instance if they occur in regulatory elements which alter gene expression. In this analysis tool, users can choose arbitrary cohorts from the CancerSysDB and profile gene expression or somatic copy number alterations of a specific gene depending on the mutation status of a different gene. Data are shown in a barplot across patients split into the cohorts selected. Furthermore, the differences in gene expression or somatic copy numbers between mutated an non-mutated patients are evaluated by a statistical test.",
+  "sourceIdentifier": "CologneWorkflow",
+  "type" :"AAAA",
+
+  "InputParameters":[
+    {
+      "identifier": "expressionGene",
+      "dataType":"Gene",
+      "description": "expression of gene to compare to"
+    },
+    {
+      "identifier": "mutationSplitGene",
+      "dataType":"Gene",
+      "description": "mutation status of Gene to Split data with"
+    }
+  ],
+
+  "execWorkflows":[
+    {
+      "description":"Gene expression/copy number depending on mutation status",
+      "outputFiles":{"showcase1_output.csv":"csv","showcase1_output.pdf":"pdf","showcase1_output.svg":"svg"},
+      "ExcecutionCommands":["Rscript showcase1_analysis.R"],
+      "VerificationCommands":["Rscript"],
+      "setFiles":["showcase1_analysis.R"],
+
+      "inputData": [
+
+        {
+          "OutputFields":["id","label","tumor_type","name","fpkm" ],
+          "hqlQuery":"select s.id as id, p.sourceIdentifier as label, cancerType.abbreviation as tumor_type, g.name as name, a.fpkm as fpkm from DataTranscriptAbundance a join a.dataset ds join ds.samples s join s.patient p join a.gene g join s.tissueType tissueClass join s.cancerType cancerType where tissueClass.abbreviation= 'TP' and g= :expressionGene",
+          "outputName":"query1.csv",
+          "name":"one",
+          "parametersForQuery":{"expressionGene":"expressionGene"}
+
+        },
+        {
+          "OutputFields":["id"],
+          "hqlQuery":"select distinct s.sourceIdentifier from DataVariation v join v.dataset ds join ds.samples s join s.tissueType tissueClass WHERE tissueClass.abbreviation= 'TP'",
+          "outputName":"query2.csv",
+          "name":"two"
+
+        },
+        {
+          "OutputFields":["id","study" ],
+          "parametersForQuery":{"mutationSplitGene":"mutationSplitGene"},
+          "hqlQuery":"select distinct s.sourceIdentifier, stud.description from DataVariationAnnotation va join va.variation v join v.dataset ds join va.gene g join ds.samples s join s.tissueType tissueClass join s.patient p join p.study stud where g= :mutationSplitGene and tissueClass.abbreviation= 'TP'",
+          "outputName":"query3.csv",
+          "name":"three"
+        }
+
+      ]
+    }
+
+  ]
+
+}
+{code}
+
+h2. The Full Description of the Munich Workflow
+
+{code:json}
+
+{
+  "DataType":"MunichWorkflow",
+  "plainDescription": "Visualisation of expression and mutation status of mitochondrial genes",
+  "longDescription":"This is an interactive visualisation tool for the display of expression and mutation status of mitochondrial genes of selected tumor-normal paired samples. It allows detailed inspection of expression and mutation data of samples and comparisons among them. Users could choose up to 6 tumor-normal pairs, either from the users’ or TCGA cohort. Data are displayed in a bee-swarm scatter plot according to log 2 fold change of expression level (tumor over normal), with each point corresponding to one mitochondrial gene. Users could interact with the tool to display mutation data (Type, position, allele) for each gene, and refine the output according to mitochondrial functions.",
+  "sourceIdentifier": "MunichWorkflow",
+  "type" :"AAAA",
+  "InputParameters":[
+    {
+      "identifier": "PatientID1",
+      "dataType":"String",
+      "description": "Selected patient for comparison"
+    },
+    {
+      "identifier": "PatientID2",
+      "dataType":"String",
+      "description": "Selected patient for comparison"
+    },
+    {
+      "identifier": "PatientID3",
+      "dataType":"String",
+      "description": "Selected patient for comparison",
+      "optional":true
+    },
+    {
+      "identifier": "PatientID4",
+      "dataType":"String",
+      "description": "Selected patient for comparison",
+      "optional":true
+    },
+    {
+      "identifier": "PatientID5",
+      "dataType":"String",
+      "description": "Selected patient for comparison",
+      "optional":true
+    },
+    {
+      "identifier": "PatientID6",
+      "dataType":"String",
+      "description": "Selected patient for comparison",
+      "optional":true
+    }
+  ],
+
+  "execWorkflows":[
+    {
+      "description":"expression and mutation status of mitochondrial genes of selected patients and Combining individual files for visualization",
+      "outputFiles":{"viz.html":"html","Logic.js":"js","data.csv":"csv"},
+      "ExcecutionCommands":["python combine.py"],
+      "VerificationCommands":[],
+      "setFiles":["viz.html","combine.py"],
+      "inputData": [
+
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier, gf.gene.name , gf.process, tde.foldChange, 'NULL' from DataGeneticFunction gf, DataTranscriptDiffExpr tde  join tde.dataset ds join ds.samples samp join samp.patient p join gf.dataset dsGF  WHERE gf.gene = tde.gene and p.sourceIdentifier = :patient and dsGF.note='genes associated to mitochondria'",
+          "outputName":"patient1.csv",
+          "name":"one",
+          "parametersForQuery":{"patient":"PatientID1"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier , gf.gene.name , gf.process, tde.foldChange,CONCAT('chr',gf.gene.chromosome,' ',gf.gene.startPos,' ',dv.refAllele,'/',dv.altAllele ) from DataGeneticFunction gf, DataTranscriptDiffExpr tde, DataVariationAnnotation dva join dva.variation dv  join tde.dataset ds join ds.samples samp join samp.patient p join dv.dataset dvds join dvds.samples dvsamp join dvsamp.patient dvp where gf.gene = tde.gene and dva.gene = tde.gene and p.sourceIdentifier  =dvp.sourceIdentifier  and p.sourceIdentifier= :patient",
+          "outputName":"patientMutation1.csv",
+          "name":"onemut",
+          "parametersForQuery":{"patient":"PatientID1"}
+
+        },
+
+
+
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier, gf.gene.name , gf.process, tde.foldChange, 'NULL' from DataGeneticFunction gf, DataTranscriptDiffExpr tde  join tde.dataset ds join ds.samples samp join samp.patient p join gf.dataset dsGF  WHERE gf.gene = tde.gene and p.sourceIdentifier = :patient and dsGF.note='genes associated to mitochondria'",
+          "outputName":"patient2.csv",
+          "name":"two",
+          "parametersForQuery":{"patient":"PatientID2"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier , gf.gene.name , gf.process, tde.foldChange,CONCAT('chr',gf.gene.chromosome,' ',gf.gene.startPos,' ',dv.refAllele,'/',dv.altAllele ) from DataGeneticFunction gf, DataTranscriptDiffExpr tde, DataVariationAnnotation dva join dva.variation dv  join tde.dataset ds join ds.samples samp join samp.patient p join dv.dataset dvds join dvds.samples dvsamp join dvsamp.patient dvp where gf.gene = tde.gene and dva.gene = tde.gene and p.sourceIdentifier  =dvp.sourceIdentifier  and p.sourceIdentifier= :patient",
+          "outputName":"patientMutation2.csv",
+          "name":"twomut",
+          "parametersForQuery":{"patient":"PatientID2"}
+
+        },
+
+
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier, gf.gene.name , gf.process, tde.foldChange, 'NULL' from DataGeneticFunction gf, DataTranscriptDiffExpr tde  join tde.dataset ds join ds.samples samp join samp.patient p join gf.dataset dsGF  WHERE gf.gene = tde.gene and p.sourceIdentifier = :patient and dsGF.note='genes associated to mitochondria'",
+          "outputName":"patient3.csv",
+          "name":"three",
+          "parametersForQuery":{"patient":"PatientID3"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier , gf.gene.name , gf.process, tde.foldChange,CONCAT('chr',gf.gene.chromosome,' ',gf.gene.startPos,' ',dv.refAllele,'/',dv.altAllele ) from DataGeneticFunction gf, DataTranscriptDiffExpr tde, DataVariationAnnotation dva join dva.variation dv  join tde.dataset ds join ds.samples samp join samp.patient p join dv.dataset dvds join dvds.samples dvsamp join dvsamp.patient dvp where gf.gene = tde.gene and dva.gene = tde.gene and p.sourceIdentifier  =dvp.sourceIdentifier  and p.sourceIdentifier= :patient",
+          "outputName":"patientMutation3.csv",
+          "name":"threemut",
+          "parametersForQuery":{"patient":"PatientID3"}
+
+        },        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier, gf.gene.name , gf.process, tde.foldChange, 'NULL' from DataGeneticFunction gf, DataTranscriptDiffExpr tde  join tde.dataset ds join ds.samples samp join samp.patient p join gf.dataset dsGF  WHERE gf.gene = tde.gene and p.sourceIdentifier = :patient and dsGF.note='genes associated to mitochondria'",
+          "outputName":"patient4.csv",
+          "name":"four",
+          "parametersForQuery":{"patient":"PatientID4"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier , gf.gene.name , gf.process, tde.foldChange,CONCAT('chr',gf.gene.chromosome,' ',gf.gene.startPos,' ',dv.refAllele,'/',dv.altAllele ) from DataGeneticFunction gf, DataTranscriptDiffExpr tde, DataVariationAnnotation dva join dva.variation dv  join tde.dataset ds join ds.samples samp join samp.patient p join dv.dataset dvds join dvds.samples dvsamp join dvsamp.patient dvp where gf.gene = tde.gene and dva.gene = tde.gene and p.sourceIdentifier  =dvp.sourceIdentifier  and p.sourceIdentifier= :patient",
+          "outputName":"patientMutation4.csv",
+          "name":"fourmut",
+          "parametersForQuery":{"patient":"PatientID4"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier, gf.gene.name , gf.process, tde.foldChange, 'NULL' from DataGeneticFunction gf, DataTranscriptDiffExpr tde  join tde.dataset ds join ds.samples samp join samp.patient p join gf.dataset dsGF  WHERE gf.gene = tde.gene and p.sourceIdentifier = :patient and dsGF.note='genes associated to mitochondria'",
+          "outputName":"patient5.csv",
+          "name":"five",
+          "parametersForQuery":{"patient":"PatientID5"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier , gf.gene.name , gf.process, tde.foldChange,CONCAT('chr',gf.gene.chromosome,' ',gf.gene.startPos,' ',dv.refAllele,'/',dv.altAllele ) from DataGeneticFunction gf, DataTranscriptDiffExpr tde, DataVariationAnnotation dva join dva.variation dv  join tde.dataset ds join ds.samples samp join samp.patient p join dv.dataset dvds join dvds.samples dvsamp join dvsamp.patient dvp where gf.gene = tde.gene and dva.gene = tde.gene and p.sourceIdentifier  =dvp.sourceIdentifier  and p.sourceIdentifier= :patient",
+          "outputName":"patientMutation5.csv",
+          "name":"fivemut",
+          "parametersForQuery":{"patient":"PatientID5"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier, gf.gene.name , gf.process, tde.foldChange, 'NULL' from DataGeneticFunction gf, DataTranscriptDiffExpr tde  join tde.dataset ds join ds.samples samp join samp.patient p join gf.dataset dsGF  WHERE gf.gene = tde.gene and p.sourceIdentifier = :patient and dsGF.note='genes associated to mitochondria'",
+          "outputName":"patient6.csv",
+          "name":"six",
+          "parametersForQuery":{"patient":"PatientID6"}
+
+        },
+        {
+          "OutputFields":["patient","gene", "func", "value", "mutation"],
+          "hqlQuery":"select distinct p.sourceIdentifier , gf.gene.name , gf.process, tde.foldChange,CONCAT('chr',gf.gene.chromosome,' ',gf.gene.startPos,' ',dv.refAllele,'/',dv.altAllele ) from DataGeneticFunction gf, DataTranscriptDiffExpr tde, DataVariationAnnotation dva join dva.variation dv  join tde.dataset ds join ds.samples samp join samp.patient p join dv.dataset dvds join dvds.samples dvsamp join dvsamp.patient dvp where gf.gene = tde.gene and dva.gene = tde.gene and p.sourceIdentifier  =dvp.sourceIdentifier  and p.sourceIdentifier= :patient",
+          "outputName":"patientMutation6.csv",
+          "name":"sixmut",
+          "parametersForQuery":{"patient":"PatientID6"}
+
+        }
+
+
+      ]
+    }
+
+  ]
+
+}
+
+{code}

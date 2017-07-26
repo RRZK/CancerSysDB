@@ -1,0 +1,48 @@
+{
+	"DataType":"ConceptualWorkflow",
+	"plainDescription":"Therapeutic response depending on mutation status",
+	"longDescription":"Targeted therapies are directed towards particular proteins of intracellular pathways. The response to a drug can strongly depend on the somatic mutation status of the target genes, or, unexpectedly, on the mutation status of some other previously unidentified molecular marker. This workflow lists for a mutation of interest the therapeutic responses of all patients in the CancerSysDB with the goal to support the identification of a suitable therapy for a patient carrying that mutation.",
+	"sourceIdentifier":"TherapyWorkflow",
+	"type":"AAA",
+	"outputFilesOrder":["showcase4_output.csv","showcase4_output.htmlsnippet"],
+
+	"InputParameters":[
+		{	
+			"identifier":"therapymutSplitGene",
+			"dataType":"Gene",
+			"description":"mutation status of gene to split the data with"
+		}
+	],
+		
+	"execWorkflows":[
+		{		
+			"description":"Therapeutic response depending on mutation status",
+			"outputFiles":{"showcase4_output.csv":"csv","showcase4_output.htmlsnippet":"htmlsnippet"},
+			"ExcecutionCommands":["Rscript showcase4_analysis.R"],
+			"VerificationCommands":["Rscript"],
+			"setFiles":["showcase4_analysis.R"],
+
+			"inputData":[
+				{
+					"OutputFields":["ID"],
+					"hqlQuery":"SELECT DISTINCT s.sourceIdentifier FROM DataVariation v JOIN v.dataset ds JOIN ds.samples s JOIN s.tissueType t WHERE t.abbreviation='TP'",
+					"outputName":"query1.csv",
+					"name":"one" 
+				},
+				{
+					"OutputFields":["ID"],
+					"parametersForQuery":{"therapymutSplitGene":"therapymutSplitGene"},
+					"hqlQuery":"SELECT DISTINCT s.sourceIdentifier FROM DataVariationAnnotation va JOIN va.variation v JOIN v.dataset ds JOIN va.gene g JOIN ds.samples s JOIN s.tissueType t WHERE g=:therapymutSplitGene AND t.abbreviation='TP'",
+					"outputName":"query2.csv",
+					"name":"two"
+				},
+				{
+					"OutputFields":["ID","FieldName","FieldValue","FieldLocation"],
+					"hqlQuery":"SELECT p.sourceIdentifier,cd.exactName,cd.value,cd.location FROM Patient p JOIN p.importInfos ii JOIN ii.infos cd WHERE cd.exactName IN ('drug_name','measure_of_response','location')",
+					"outputName":"query3.csv",
+					"name":"three"
+				}
+			]
+		}
+	]
+}

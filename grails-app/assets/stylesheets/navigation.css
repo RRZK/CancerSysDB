@@ -1,0 +1,334 @@
+.appNav {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+.appNav li {
+    list-style: none;
+    margin: 2px;
+    min-height: 2em;
+    display: inline;
+    padding-top: 15px ;
+    paddings-right: 10px;
+    z-index:5;
+}
+
+.appNav li a.selected {
+    box-shadow: 5px 5px 4px #888888;
+//  margin-left: 20px;
+//  margin-top: 0px;
+//  margin-bottom: -0px;
+//  margin-right: -20px;
+}
+
+.appNav li a {
+    font-size: 1em;
+    color: #000000;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    padding: 2px 15px;
+    min-height: 2em;
+    vertical-align: middle !important;
+//    box-shadow: 10px 10px 0px 5px #888888;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    margin-top: 15px;
+    z-index:  10;
+
+}
+
+.appNav li a span{
+    content:"";
+    padding:10px 0px;
+    height: 2em;
+    z-index:  12;
+}
+
+ul#appMenu{
+    z-index:1;
+}
+
+ul#appMenu li a {
+//  overflow: hidden;
+    position: relative;
+    z-index:10;
+}
+ul#appMenu li a.selected:hover:after{
+    border-bottom: 1px solid  #888888;
+    border-right: 1px solid  #888888;
+}
+
+ul#appMenu li a.selected:after, ul#appMenu li a:hover:after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #FFFFFF;
+//  box-shadow: 0 0 3px #666;
+//  box-shadow: outset 0 15px 15px 5px black;//bottom
+transform: rotate(45deg);
+    bottom:-8px;
+    left: 50%;
+    margin-left:-10px;
+    z-index:9;
+    border-bottom: 1px solid  #888888;
+    border-right: 1px solid  #888888;
+}
+
+
+ul#appMenu li a:hover:after {
+    border:none;
+}
+
+.appNav li a:hover {
+    background-color: #FFFFFF;
+    text-decoration: underline
+}
+
+.appNav li a.invalid {
+    font-size: 1em;
+    color: #000000;
+    background-color: #ffd5d1;
+    text-decoration: none;
+    display: block;
+    padding: 2px 15px;
+}
+
+.appNav li a.invalid:hover {
+    background-color: #ffa8a0;
+}
+.appNav li a.closed {
+    font-size: 1em;
+    background-color: #aaaaaa;
+    text-decoration: none;
+    display: block;
+    padding: 2px 15px;
+    border-radius: 5px;
+    border: 3px solid #FFFFFF;
+}
+
+
+
+/* priMenu */
+#priMenu {
+    margin: 2px;
+    height: auto;
+    overflow: auto;
+    line-height: 40px;
+    background-color: #FFFFFF;
+    border: solid #000000  1px;
+    border-radius: 8px;
+    padding: 0px;
+}
+
+#priMenu li {
+    float: left;
+    list-style: none;
+}
+
+#priMenu li a {
+    font-size: 138.5%;
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    padding: 0 15px;
+}
+
+#priMenu li ul.subpriMenu li a {
+    font-size: 115.5%
+}
+
+#priMenu li ul.subpriMenu li a:hover {
+    text-decoration: underline
+}
+
+#priMenu li a.active {
+    background: #CCCCCC;
+    color: #427A9F;
+}
+
+#priMenu li:hover a,
+#priMenu li a:hover {
+    background: #AAAAAA;
+    color: #427a9f;
+}
+
+
+
+
+ul#priMenu {
+
+    list-style: none;
+    text-align: center;
+
+}
+
+ul#priMenu li {
+    float: left;
+    position: relative;
+    /*  font-size: 16px;
+      background-color: orange;*/
+}
+
+ul#priMenu li li {
+    font-size: 14px;
+}
+
+ul#priMenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    display: none;
+}
+
+ul#priMenu li:hover > ul {
+    display: block;
+    position: absolute;
+}
+
+ul#priMenu a:link, ul#priMenu a:visited {
+    display: block;
+    /*width: 110px;
+    padding: 10px 5px;
+    text-decoration: none;
+    color: #000;*/
+}
+
+ul#priMenu ul a:link, ul#priMenu ul a:visited {
+    width: 135px;
+}
+
+ul#priMenu a:hover, ul#priMenu a:active {
+    /*color: #fff;*/
+}
+
+ul#priMenu ul ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+ul#priMenu ul li:hover > ul {
+    display: block;
+}
+
+ul#priMenu li a.logout{
+    background:orange;
+    position:relative;
+    right: 111px;
+    left:0px;
+    width:111px;
+}
+ul#priMenu li:last-child{
+    float:right;
+}
+
+
+/* secMenu */
+#secMenu {
+    margin: 5px 20px 10px 20px;
+    height: 20px;
+    line-height: 20px;
+    background-color: #FFFFFF;
+    border: solid #000000  1px;
+    border-radius: 4px;
+    padding: 0px;
+}
+
+#secMenu li {
+    float: left;
+    list-style: none;
+}
+
+#secMenu li a {
+    font-size: 100%;
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    padding: 0 7px;
+}
+
+#secMenu li ul.subsecMenu li a {
+    font-size: 100.0%
+}
+
+#secMenu li ul.subsecMenu li a:hover {
+    text-decoration: underline
+}
+
+#secMenu li a.active {
+    background: #CCCCCC;
+    color: #427A9F;
+}
+
+#secMenu li:hover a,
+#secMenu li a:hover {
+    background: #AAAAAA;
+    color: #427a9f;
+}
+
+
+
+
+ul#secMenu {
+
+    list-style: none;
+    text-align: center;
+
+}
+
+ul#secMenu li {
+    float: left;
+    position: relative;
+}
+
+ul#secMenu li li {
+    font-size: 12px;
+}
+
+ul#secMenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    display: none;
+}
+
+ul#secMenu li:hover > ul {
+    display: block;
+    position: absolute;
+}
+
+ul#secMenu a:link, ul#secMenu a:visited {
+    display: block;
+}
+
+ul#secMenu ul a:link, ul#secMenu ul a:visited {
+    width: 90px;
+}
+
+ul#secMenu a:hover, ul#secMenu a:active {
+    /*color: #fff;*/
+}
+
+ul#secMenu ul ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+ul#secMenu ul li:hover > ul {
+    display: block;
+}
+
+ul#secMenu li a.logout{
+    background:orange;
+    position:relative;
+    right: 80px;
+    left:0px;
+    width:80px;
+}
+

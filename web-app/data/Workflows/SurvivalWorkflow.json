@@ -1,0 +1,47 @@
+{
+	"DataType":"ConceptualWorkflow",
+	"plainDescription":"Overall survival depending on mutation status",
+	"longDescription":"Somatic mutations can severely affect the prognosis of a patient's overall survival. In this analysis tool, users can choose arbitrary cohorts from the CancerSysDB and analyze the overall survival times depending on the mutation status of a user-defined gene. Data are shown as Kaplan-Meier curves split into cohorts with and without the mutation. Furthermore, the differences in median overall survival are computed and evaluated by a log-rank test.",
+	"sourceIdentifier":"SurvivalWorkflow",
+	"type":"AAA",
+
+	"InputParameters":[
+		{	
+			"identifier":"mutationSplitGene",
+			"dataType":"Gene",
+			"description":"mutation status of gene to split the data with"
+		}
+	],
+		
+	"execWorkflows":[
+		{		
+			"description":"Overall survival depending on mutation status",
+			"outputFiles":{"showcase3_output.txt":"txt","showcase3_output.pdf":"pdf"},
+			"ExcecutionCommands":["Rscript showcase3_analysis.R"],
+			"VerificationCommands":["Rscript"],
+			"setFiles":["showcase3_analysis.R"],
+
+			"inputData":[
+				{
+					"OutputFields":["ID"],
+					"hqlQuery":"SELECT DISTINCT s.sourceIdentifier FROM DataVariation v JOIN v.dataset ds JOIN ds.samples s JOIN s.tissueType t WHERE t.abbreviation='TP'",
+					"outputName":"query1.csv",
+					"name":"one" 
+				},
+				{
+					"OutputFields":["ID"],
+					"parametersForQuery":{"mutationSplitGene":"mutationSplitGene"},
+					"hqlQuery":"SELECT DISTINCT s.sourceIdentifier FROM DataVariationAnnotation va JOIN va.variation v JOIN v.dataset ds JOIN va.gene g JOIN ds.samples s JOIN s.tissueType t WHERE g=:mutationSplitGene AND t.abbreviation='TP'",
+					"outputName":"query2.csv",
+					"name":"two"
+				},
+				{
+					"OutputFields":["ID","EventStatus","LastFollowUp"],
+					"hqlQuery":"SELECT p.sourceIdentifier,cd.exactName,cd.value FROM Patient p JOIN p.importInfos ii JOIN ii.infos cd WHERE cd.exactName IN ('days_to_death','days_to_last_followup')",
+					"outputName":"query3.csv",
+					"name":"three"
+				}
+			]
+		}
+	]
+}

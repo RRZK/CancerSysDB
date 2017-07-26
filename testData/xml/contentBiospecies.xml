@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bio:tcga_bcr xsi:schemaLocation="http://tcga.nci/bcr/xml/biospecimen/2.6 http://tcga-data.nci.nih.gov/docs/xsd/BCR/tcga.nci/bcr/xml/biospecimen/2.6/TCGA_BCR.Biospecimen.xsd" schemaVersion="2.6" xmlns:bio="http://tcga.nci/bcr/xml/biospecimen/2.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:admin="http://tcga.nci/bcr/xml/administration/2.6" xmlns:shared="http://tcga.nci/bcr/xml/clinical/shared/2.6" xmlns:bio_shared="http://tcga.nci/bcr/xml/biospecimen/shared/2.6" xmlns:cqcf="http://tcga.nci/bcr/xml/clinical/cqcf/2.6">
+    <admin:admin>
+        <admin:bcr xsd_ver="1.17">Test</admin:bcr>
+        <admin:file_uuid xsd_ver="2.6">98A3433D-7A3B-3ACE-B6FB-D6045E7493</admin:file_uuid>
+        <admin:batch_number xsd_ver="1.17">109.8.0</admin:batch_number>
+        <admin:project_code xsd_ver="">Testproj</admin:project_code>
+        <admin:disease_code xsd_ver="2.6">BRCA</admin:disease_code>
+        <admin:day_of_dcc_upload xsd_ver="1.17">1</admin:day_of_dcc_upload>
+        <admin:month_of_dcc_upload xsd_ver="1.17">1</admin:month_of_dcc_upload>
+        <admin:year_of_dcc_upload xsd_ver="1.17">2030</admin:year_of_dcc_upload>
+    </admin:admin>
+    <bio:patient>
+        <admin:additional_studies/>
+        <shared:bcr_patient_barcode cde="2673794" xsd_ver="1.8" procurement_status="Completed" owner="">Testproj-A2-A3FX</shared:bcr_patient_barcode>
+        <shared:bcr_patient_uuid cde="" xsd_ver="2.3" procurement_status="Completed" owner="">XXXXXXXX-XXXX-XXXX-XXX-XXXXXXXXXX</shared:bcr_patient_uuid>
+        <shared:tissue_source_site cde="" xsd_ver="2.4" procurement_status="Completed" owner="">A2</shared:tissue_source_site>
+        <shared:patient_id cde="" xsd_ver="2.4" procurement_status="Completed" owner="">A3FX</shared:patient_id>
+        <shared:gender cde="2200604" xsd_ver="1.8" procurement_status="Completed" owner="">FEMALE</shared:gender>
+        <bio:days_to_index precision="day" procurement_status="Completed" cde="" xsd_ver="2.6" owner="">17</bio:days_to_index>
+        <bio:bcr_canonical_check>
+            <bio:bcr_patient_canonical_status cde="" xsd_ver="2.6" procurement_status="Completed" owner="">Canonical</bio:bcr_patient_canonical_status>
+        </bio:bcr_canonical_check>
+         <bio:samples>
+            <bio:sample>
+                <admin:additional_studies/>
+                <bio:sample_type_id cde="" xsd_ver="2.4" procurement_status="Completed" owner="">01</bio:sample_type_id>
+                <bio:vial_number cde="" xsd_ver="2.4" procurement_status="Completed" owner="">A</bio:vial_number>
+                <bio:biospecimen_sequence cde="" xsd_ver="2.6" procurement_status="Not Available" owner=""/>
+                <bio:sample_type cde="" xsd_ver="2.4" procurement_status="Completed" owner="">Primary solid Tumor</bio:sample_type>
+                <bio:longest_dimension cde="" xsd_ver="1.8" procurement_status="Not Available" owner=""/>
+                <bio:intermediate_dimension cde="" xsd_ver="1.8" procurement_status="Not Available" owner=""/>
+                <bio:shortest_dimension cde="" xsd_ver="1.8" procurement_status="Not Available" owner=""/>
+                <bio:initial_weight cde="" xsd_ver="1.8" procurement_status="Completed" owner="">363</bio:initial_weight>
+                <bio:current_weight cde="" xsd_ver="1.8" procurement_status="Not Available" owner=""/>
+                <bio:freezing_method cde="" xsd_ver="1.8" procurement_status="Not Available" owner=""/>
+                <bio:oct_embedded cde="" xsd_ver="1.8" procurement_status="Completed" owner="">true</bio:oct_embedded>
+                <bio:preservation_method cde="" xsd_ver="2.6" procurement_status="Not Available" owner=""/>
+                <bio:tissue_type cde="" xsd_ver="2.6" procurement_status="Not Available" owner=""/>
+                <bio:composition cde="" xsd_ver="2.6" procurement_status="Not Available" owner=""/>
+                <bio:tumor_descriptor cde="" xsd_ver="2.6" procurement_status="Not Available" owner=""/>
+                <bio:days_to_collection precision="day" procurement_status="Completed" cde="" xsd_ver="2.6" owner="">937</bio:days_to_collection>
+                <bio:time_between_clamping_and_freezing cde="" xsd_ver="1.8" procurement_status="Not Available" owner=""/>
+                <bio:time_between_excision_and_freezing cde="" xsd_ver="1.8" procurement_status="Not Available" owner=""/>
+                <bio:bcr_sample_barcode cde="" xsd_ver="1.8" procurement_status="Completed" owner="">Testproj-A2-A1FX-03A</bio:bcr_sample_barcode>
+                <bio:bcr_sample_uuid cde="" xsd_ver="2.3" procurement_status="Completed" owner="">71e87611-903b-4b9d-a506-89e58934dc81</bio:bcr_sample_uuid>
+                <bio:is_ffpe cde="4170557" xsd_ver="2.6" procurement_status="Completed" owner="">Yes</bio:is_ffpe>
+                <bio:portions>
+                    <bio:shipment_portion>
+                        <admin:additional_studies/>
+                        <bio:portion_number cde="" xsd_ver="2.4" procurement_status="Completed" owner="">21</bio:portion_number>
+                        <bio:portion_sequence cde="" xsd_ver="2.6" procurement_status="Completed" owner="">2</bio:portion_sequence>
+                        <bio:plate_id cde="" xsd_ver="2.4" procurement_status="Completed" owner="">H39I</bio:plate_id>
+                        <bio:center_id cde="" xsd_ver="2.4" procurement_status="Completed" owner="">20</bio:center_id>
+                        <bio:shipment_portion_day_of_shipment cde="" xsd_ver="2.4" procurement_status="Completed" owner="">2</bio:shipment_portion_day_of_shipment>
+                        <bio:shipment_portion_month_of_shipment cde="" xsd_ver="2.4" procurement_status="Completed" owner="">8</bio:shipment_portion_month_of_shipment>
+                        <bio:shipment_portion_year_of_shipment cde="" xsd_ver="2.4" procurement_status="Completed" owner="">2031</bio:shipment_portion_year_of_shipment>
+                        <bio:shipment_portion_bcr_aliquot_barcode cde="" xsd_ver="2.4" procurement_status="Completed" owner="">Testproj-A2-A1FX-01A-21-A39I-20</bio:shipment_portion_bcr_aliquot_barcode>
+                        <bio:bcr_shipment_portion_uuid cde="" xsd_ver="2.4" procurement_status="Completed" owner="">0B991416-2CA1-4582-B139-E95E4E8CA5E8</bio:bcr_shipment_portion_uuid>
+                        <bio:is_ffpe cde="4170557" xsd_ver="2.6" procurement_status="Completed" owner="">NO</bio:is_ffpe>
+                    </bio:shipment_portion>
+                </bio:portions>
+                <bio:tumor_pathology/>
+                <bio:method_of_sample_procurement cde="3103514" xsd_ver="2.3" procurement_status="Not Available" owner=""/>
+                <bio:NCNNCT_OthMethONSP cde="" xsd_ver="2.3" procurement_status="Not Available" owner=""/>
+                <bio_shared:other_method_of_sample_procurement cde="2006730" xsd_ver="2.5" procurement_status="Not Available" owner=""/>
+                <bio:days_to_sample_procurement cde="" xsd_ver="2.6" procurement_status="Not Available" owner=""/>
+                <bio:pathology_report_uuid cde="" xsd_ver="2.4" procurement_status="Completed" owner="">EAFC71A3-D6FC-46EA-BC47-D054C497D905</bio:pathology_report_uuid>
+                <bio:pathology_report_file_name cde="" xsd_ver="2.6" procurement_status="Completed" owner="">Testproj-A2-A1FX.EAFC71A3-D6FC-46EA-BC47-D054C497D905.pdf</bio:pathology_report_file_name>
+                <bio:diagnostic_slides>
+                    <admin:additional_studies/>
+                    <bio:ffpe_slide_uuid cde="" xsd_ver="2.4" procurement_status="Completed" owner="">35B93F3A-9959-4D72-A702-08B29563D24F</bio:ffpe_slide_uuid>
+                </bio:diagnostic_slides>
+            </bio:sample>
+            <bio:sample>
+                <admin:additional_studies/>
+                <bio:sample_type_id cde="" xsd_ver="2.4" procurement_status="Completed" owner="">10</bio:sample_type_id>
+                <bio:vial_number cde="" xsd_ver="2.4" procurement_status="Completed" owner="">G</bio:vial_number>
+                <bio:biospecimen_sequence cde="" xsd_ver="2.6" procurement_status="Not Available" owner=""/>
+                <bio:sample_type cde="" xsd_ver="2.4" procurement_status="Completed" owner="">Blood Derived Normal</bio:sample_type>
+                <bio:longest_dimension cde="" xsd_ver="1.8" procurement_status="Not Available" owner=""/>
+                <bio:intermediate_dimension cde="" xsd_ver="1.8" procurement_status="Not Available" owner=""/>
+                <bio:shortest_dimension cde="" xsd_ver="1.8" procurement_status="Not Available" owner=""/>
+                <bio:initial_weight cde="" xsd_ver="1.8" procurement_status="Not Available" owner=""/>
+                <bio:current_weight cde="" xsd_ver="1.8" procurement_status="Not Available" owner=""/>
+                <bio:freezing_method cde="" xsd_ver="1.8" procurement_status="Not Available" owner=""/>
+                <bio:oct_embedded cde="" xsd_ver="1.8" procurement_status="Completed" owner="">true</bio:oct_embedded>
+                <bio:preservation_method cde="" xsd_ver="2.6" procurement_status="Not Available" owner=""/>
+                <bio:tissue_type cde="" xsd_ver="2.6" procurement_status="Not Available" owner=""/>
+                <bio:composition cde="" xsd_ver="2.6" procurement_status="Not Available" owner=""/>
+                <bio:tumor_descriptor cde="" xsd_ver="2.6" procurement_status="Not Available" owner=""/>
+                <bio:days_to_collection precision="day" procurement_status="Completed" cde="" xsd_ver="2.6" owner="">937</bio:days_to_collection>
+                <bio:time_between_clamping_and_freezing cde="" xsd_ver="1.8" procurement_status="Not Available" owner=""/>
+                <bio:time_between_excision_and_freezing cde="" xsd_ver="1.8" procurement_status="Not Available" owner=""/>
+                <bio:bcr_sample_barcode cde="" xsd_ver="1.8" procurement_status="Completed" owner="">Testproj-A2-A1FX-30A</bio:bcr_sample_barcode>
+                <bio:bcr_sample_uuid cde="" xsd_ver="2.3" procurement_status="Completed" owner="">7fa97239-f5be-4d09-bee2-053f5f55ce03</bio:bcr_sample_uuid>
+                <bio:is_ffpe cde="4170557" xsd_ver="2.6" procurement_status="Completed" owner="">NO</bio:is_ffpe>
+            </bio:sample>
+        </bio:samples>
+    </bio:patient>
+</bio:tcga_bcr>

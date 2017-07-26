@@ -1,0 +1,1225 @@
+sample,gene,func,value,mutation
+A0B3,AIFM1,Apoptosis,0.923166,NULL
+A0B3,ANP32A,Apoptosis,0.627037,NULL
+A0B3,APAF1,Apoptosis,-0.352177,NULL
+A0B3,APOPT1,Apoptosis,1.02315,NULL
+A0B3,BAD,Apoptosis,0.782312,NULL
+A0B3,BAK1,Apoptosis,1.57268,NULL
+A0B3,BAX,Apoptosis,1.57789,NULL
+A0B3,BBC3,Apoptosis,0.484649,NULL
+A0B3,BCL2,Apoptosis,-3.81842,NULL
+A0B3,BCL2L1,Apoptosis,0.295356,NULL
+A0B3,BCL2L11,Apoptosis,-0.0912098,NULL
+A0B3,BID,Apoptosis,0.43113,NULL
+A0B3,BIK,Apoptosis,-1.81368,NULL
+A0B3,CASP3,Apoptosis,1.1469,NULL
+A0B3,CASP7,Apoptosis,0.583925,NULL
+A0B3,CASP9,Apoptosis,-0.167994,NULL
+A0B3,CDK1,Apoptosis,4.4429,NULL
+A0B3,CYCS,Apoptosis,0.928865,NULL
+A0B3,DIABLO,Apoptosis,0.730068,NULL
+A0B3,DNM1,Apoptosis,0.129578,NULL
+A0B3,EIF3M,Apoptosis,0.467664,NULL
+A0B3,HTRA2,Apoptosis,0.298299,NULL
+A0B3,MAPK1,Apoptosis,0.319019,NULL
+A0B3,MAPK3,Apoptosis,-0.0410932,NULL
+A0B3,MCL1,Apoptosis,1.45836,NULL
+A0B3,PMAIP1,Apoptosis,1.51053,NULL
+A0B3,PPIA,Apoptosis,1.60192,NULL
+A0B3,PPIF,Apoptosis,0.79486,NULL
+A0B3,SLC25A4,Apoptosis,-0.33907,NULL
+A0B3,SLC25A5,Apoptosis,1.49659,NULL
+A0B3,SLC25A6,Apoptosis,-inf,NULL
+A0B3,SLC25A6,Apoptosis,0,NULL
+A0B3,TP53,Apoptosis,1.523,chr17 7578203 C>T Missense_Mutation
+A0B3,VDAC1,Apoptosis,1.16891,NULL
+A0B3,VDAC2,Apoptosis,0.588239,NULL
+A0B3,VDAC3,Apoptosis,1.06414,NULL
+A0B3,XIAP,Apoptosis,-0.160446,NULL
+A0E0,AIFM1,Apoptosis,0.754687,NULL
+A0E0,ANP32A,Apoptosis,-0.703996,NULL
+A0E0,APAF1,Apoptosis,-0.741985,NULL
+A0E0,APOPT1,Apoptosis,0.464105,NULL
+A0E0,BAD,Apoptosis,0.204254,NULL
+A0E0,BAK1,Apoptosis,0.688592,NULL
+A0E0,BAX,Apoptosis,1.52201,NULL
+A0E0,BBC3,Apoptosis,1.17666,NULL
+A0E0,BCL2,Apoptosis,-2.07529,NULL
+A0E0,BCL2L1,Apoptosis,-0.0133506,NULL
+A0E0,BCL2L11,Apoptosis,-1.51215,NULL
+A0E0,BID,Apoptosis,-1.15992,NULL
+A0E0,BIK,Apoptosis,-3.74693,NULL
+A0E0,CASP3,Apoptosis,-0.0574271,NULL
+A0E0,CASP7,Apoptosis,-0.801901,NULL
+A0E0,CASP9,Apoptosis,-0.248805,NULL
+A0E0,CDK1,Apoptosis,3.30728,NULL
+A0E0,CYCS,Apoptosis,1.64742,NULL
+A0E0,DIABLO,Apoptosis,-0.00057168,NULL
+A0E0,DNM1,Apoptosis,-0.373237,NULL
+A0E0,EIF3M,Apoptosis,0.0593582,NULL
+A0E0,HTRA2,Apoptosis,0.47435,NULL
+A0E0,MAPK1,Apoptosis,-0.46156,NULL
+A0E0,MAPK3,Apoptosis,-0.103697,NULL
+A0E0,MCL1,Apoptosis,0.41997,NULL
+A0E0,PMAIP1,Apoptosis,1.40756,NULL
+A0E0,PPIA,Apoptosis,0.213781,NULL
+A0E0,PPIF,Apoptosis,1.4792,NULL
+A0E0,SLC25A4,Apoptosis,-1.39997,NULL
+A0E0,SLC25A5,Apoptosis,0.447639,NULL
+A0E0,SLC25A6,Apoptosis,0,NULL
+A0E0,SLC25A6,Apoptosis,0,NULL
+A0E0,TP53,Apoptosis,0.574354,chr17 7578406 C>T Missense_Mutation
+A0E0,VDAC1,Apoptosis,0.832787,NULL
+A0E0,VDAC2,Apoptosis,0.901689,NULL
+A0E0,VDAC3,Apoptosis,0.552406,NULL
+A0E0,XIAP,Apoptosis,-0.0905422,NULL
+A0B3,C22orf32,Calcium trafficking,-0.857002,NULL
+A0B3,CCDC109B,Calcium trafficking,2.17235,NULL
+A0B3,CCDC90A,Calcium trafficking,0.962727,NULL
+A0B3,EFHA1,Calcium trafficking,0.125201,NULL
+A0B3,EFHA2,Calcium trafficking,-2.6532,NULL
+A0B3,ITPR1,Calcium trafficking,-3.44231,NULL
+A0B3,ITPR2,Calcium trafficking,-2.74294,NULL
+A0B3,ITPR3,Calcium trafficking,1.702,NULL
+A0B3,LETM1,Calcium trafficking,0.889799,NULL
+A0B3,MCU,Calcium trafficking,0.644044,NULL
+A0B3,MICU1,Calcium trafficking,0.23205,NULL
+A0B3,PACS2,Calcium trafficking,0.508446,NULL
+A0B3,PML,Calcium trafficking,0.858436,NULL
+A0B3,SIGMAR1,Calcium trafficking,1.42716,NULL
+A0B3,SLC24A6,Calcium trafficking,0.51075,NULL
+A0B3,TCHP,Calcium trafficking,-0.113227,NULL
+A0E0,C22orf32,Calcium trafficking,-1.06074,NULL
+A0E0,CCDC109B,Calcium trafficking,1.54673,NULL
+A0E0,CCDC90A,Calcium trafficking,1.07728,NULL
+A0E0,EFHA1,Calcium trafficking,-0.867507,NULL
+A0E0,EFHA2,Calcium trafficking,-2.67877,NULL
+A0E0,ITPR1,Calcium trafficking,-4.32214,NULL
+A0E0,ITPR2,Calcium trafficking,-1.64245,NULL
+A0E0,ITPR3,Calcium trafficking,-2.72271,NULL
+A0E0,LETM1,Calcium trafficking,0.863584,NULL
+A0E0,MCU,Calcium trafficking,-0.52489,NULL
+A0E0,MICU1,Calcium trafficking,0.0169838,NULL
+A0E0,PACS2,Calcium trafficking,0.362759,NULL
+A0E0,PML,Calcium trafficking,0.520948,NULL
+A0E0,SIGMAR1,Calcium trafficking,1.7969,NULL
+A0E0,SLC24A6,Calcium trafficking,-0.090287,NULL
+A0E0,TCHP,Calcium trafficking,-0.326064,NULL
+A0B3,CDS1,Cardiolipin biosynthesis,0.405002,NULL
+A0B3,CRLS1,Cardiolipin biosynthesis,0.0873488,NULL
+A0B3,PGS1,Cardiolipin biosynthesis,0.421543,NULL
+A0B3,PTPMT1,Cardiolipin biosynthesis,1.14199,NULL
+A0B3,TAZ,Cardiolipin biosynthesis,0.818245,NULL
+A0E0,CDS1,Cardiolipin biosynthesis,0.570372,NULL
+A0E0,CRLS1,Cardiolipin biosynthesis,-0.0519438,NULL
+A0E0,PGS1,Cardiolipin biosynthesis,0.620088,NULL
+A0E0,PTPMT1,Cardiolipin biosynthesis,-0.371997,NULL
+A0E0,TAZ,Cardiolipin biosynthesis,0.704722,NULL
+A0B3,ACAD9,Electron transport chain,0.732724,NULL
+A0B3,ATP5A1,Electron transport chain,0.367981,NULL
+A0B3,ATP5B,Electron transport chain,0.309255,NULL
+A0B3,ATP5C1,Electron transport chain,1.95455,NULL
+A0B3,ATP5D,Electron transport chain,0.34855,NULL
+A0B3,ATP5F1,Electron transport chain,1.06818,NULL
+A0B3,ATP5G1,Electron transport chain,1.26145,NULL
+A0B3,ATP5G2,Electron transport chain,-0.263462,NULL
+A0B3,ATP5G3,Electron transport chain,1.35828,NULL
+A0B3,ATP5H,Electron transport chain,1.05214,NULL
+A0B3,ATP5I,Electron transport chain,0.573603,NULL
+A0B3,ATP5J,Electron transport chain,0.586682,NULL
+A0B3,ATP5L,Electron transport chain,1.20636,NULL
+A0B3,ATP5O,Electron transport chain,0.401752,NULL
+A0B3,ATPAF1,Electron transport chain,0.298686,NULL
+A0B3,ATPAF2,Electron transport chain,1.19157,NULL
+A0B3,ATPIF1,Electron transport chain,0.763238,NULL
+A0B3,BCS1L,Electron transport chain,-0.33554,NULL
+A0B3,C1orf31,Electron transport chain,1.33919,NULL
+A0B3,C20orf7,Electron transport chain,0.260704,NULL
+A0B3,C2orf56,Electron transport chain,0.373106,NULL
+A0B3,C7orf44,Electron transport chain,0.443039,NULL
+A0B3,C8orf38,Electron transport chain,0.963567,NULL
+A0B3,CCDC56,Electron transport chain,-0.233381,NULL
+A0B3,CHCHD8,Electron transport chain,0.959924,NULL
+A0B3,COA5,Electron transport chain,-0.505343,NULL
+A0B3,COX10,Electron transport chain,1.33629,NULL
+A0B3,COX11,Electron transport chain,0.179891,NULL
+A0B3,COX14,Electron transport chain,-0.0865584,NULL
+A0B3,COX15,Electron transport chain,-0.287402,NULL
+A0B3,COX17,Electron transport chain,1.0161,NULL
+A0B3,COX18,Electron transport chain,-0.633732,NULL
+A0B3,COX19,Electron transport chain,-0.083764,NULL
+A0B3,COX20,Electron transport chain,1.21021,NULL
+A0B3,COX4I1,Electron transport chain,0.395878,NULL
+A0B3,COX4I2,Electron transport chain,-0.648746,NULL
+A0B3,COX5A,Electron transport chain,1.36464,NULL
+A0B3,COX5B,Electron transport chain,1.06161,NULL
+A0B3,COX6A1,Electron transport chain,1.52524,NULL
+A0B3,COX6A2,Electron transport chain,inf,NULL
+A0B3,COX6B1,Electron transport chain,1.85457,NULL
+A0B3,COX6B2,Electron transport chain,-1.29049,NULL
+A0B3,COX6C,Electron transport chain,1.6003,NULL
+A0B3,COX7A1,Electron transport chain,-0.307857,NULL
+A0B3,COX7A2,Electron transport chain,1.01461,NULL
+A0B3,COX7B,Electron transport chain,1.29249,NULL
+A0B3,COX7B2,Electron transport chain,inf,NULL
+A0B3,COX7C,Electron transport chain,0.0486368,NULL
+A0B3,COX8A,Electron transport chain,1.41694,NULL
+A0B3,CYC1,Electron transport chain,1.70075,NULL
+A0B3,FOXRED1,Electron transport chain,0.00122625,NULL
+A0B3,HCCS,Electron transport chain,1.81179,NULL
+A0B3,MNF1,Electron transport chain,1.87316,NULL
+A0B3,NDUFA1,Electron transport chain,1.09097,NULL
+A0B3,NDUFA10,Electron transport chain,-0.299011,NULL
+A0B3,NDUFA11,Electron transport chain,1.00961,NULL
+A0B3,NDUFA12,Electron transport chain,1.1359,NULL
+A0B3,NDUFA13,Electron transport chain,0.932194,NULL
+A0B3,NDUFA2,Electron transport chain,0.0954896,NULL
+A0B3,NDUFA3,Electron transport chain,1.90024,NULL
+A0B3,NDUFA4,Electron transport chain,0.771064,NULL
+A0B3,NDUFA5,Electron transport chain,-0.601887,NULL
+A0B3,NDUFA6,Electron transport chain,0.774516,NULL
+A0B3,NDUFA7,Electron transport chain,0.718744,NULL
+A0B3,NDUFA8,Electron transport chain,0.714666,NULL
+A0B3,NDUFA9,Electron transport chain,1.13104,NULL
+A0B3,NDUFAB1,Electron transport chain,1.56337,NULL
+A0B3,NDUFAF1,Electron transport chain,0.0122761,NULL
+A0B3,NDUFAF2,Electron transport chain,0.272173,NULL
+A0B3,NDUFAF3,Electron transport chain,0.702048,NULL
+A0B3,NDUFAF4,Electron transport chain,0.418209,NULL
+A0B3,NDUFB1,Electron transport chain,0.428986,NULL
+A0B3,NDUFB10,Electron transport chain,1.13094,NULL
+A0B3,NDUFB11,Electron transport chain,0.755969,NULL
+A0B3,NDUFB2,Electron transport chain,0.821964,NULL
+A0B3,NDUFB3,Electron transport chain,1.44581,NULL
+A0B3,NDUFB4,Electron transport chain,0.748311,NULL
+A0B3,NDUFB5,Electron transport chain,0.668684,NULL
+A0B3,NDUFB6,Electron transport chain,0.355437,NULL
+A0B3,NDUFB7,Electron transport chain,0.365184,NULL
+A0B3,NDUFB8,Electron transport chain,0.20834,NULL
+A0B3,NDUFB9,Electron transport chain,1.66843,NULL
+A0B3,NDUFC1,Electron transport chain,0.161996,NULL
+A0B3,NDUFS1,Electron transport chain,-0.0157696,NULL
+A0B3,NDUFS2,Electron transport chain,2.15221,NULL
+A0B3,NDUFS3,Electron transport chain,0.633504,NULL
+A0B3,NDUFS4,Electron transport chain,-0.229889,NULL
+A0B3,NDUFS5,Electron transport chain,1.70673,NULL
+A0B3,NDUFS6,Electron transport chain,2.19272,NULL
+A0B3,NDUFS7,Electron transport chain,0.729225,NULL
+A0B3,NDUFS8,Electron transport chain,1.32075,NULL
+A0B3,NDUFV1,Electron transport chain,0.107862,NULL
+A0B3,NDUFV2,Electron transport chain,0.429203,NULL
+A0B3,NDUFV3,Electron transport chain,1.05687,NULL
+A0B3,NUBPL,Electron transport chain,-0.822138,NULL
+A0B3,PTCD2,Electron transport chain,-0.439934,NULL
+A0B3,SCO1,Electron transport chain,0.414597,NULL
+A0B3,SDHAF1,Electron transport chain,0.822399,NULL
+A0B3,SDHAF2,Electron transport chain,0.804014,NULL
+A0B3,SELRC1,Electron transport chain,1.10515,NULL
+A0B3,SURF1,Electron transport chain,-0.086845,NULL
+A0B3,TMEM126B,Electron transport chain,-0.145933,NULL
+A0B3,TMEM70,Electron transport chain,1.11565,NULL
+A0B3,TTC19,Electron transport chain,-0.46063,NULL
+A0B3,UQCC,Electron transport chain,-0.753074,NULL
+A0B3,UQCR10,Electron transport chain,0.978231,NULL
+A0B3,UQCR11,Electron transport chain,0.621608,NULL
+A0B3,UQCRB,Electron transport chain,1.11629,NULL
+A0B3,UQCRC1,Electron transport chain,1.13925,NULL
+A0B3,UQCRC2,Electron transport chain,0.243822,NULL
+A0B3,UQCRFS1,Electron transport chain,0.943347,NULL
+A0B3,UQCRH,Electron transport chain,1.58921,NULL
+A0B3,UQCRQ,Electron transport chain,1.06068,NULL
+A0E0,ACAD9,Electron transport chain,1.62323,NULL
+A0E0,ATP5A1,Electron transport chain,0.146903,NULL
+A0E0,ATP5B,Electron transport chain,-0.173051,NULL
+A0E0,ATP5C1,Electron transport chain,0.849364,NULL
+A0E0,ATP5D,Electron transport chain,0.152729,NULL
+A0E0,ATP5F1,Electron transport chain,0.268879,NULL
+A0E0,ATP5G1,Electron transport chain,0.383595,NULL
+A0E0,ATP5G2,Electron transport chain,-0.600137,NULL
+A0E0,ATP5G3,Electron transport chain,0.0786165,NULL
+A0E0,ATP5H,Electron transport chain,-0.389236,NULL
+A0E0,ATP5I,Electron transport chain,0.205379,NULL
+A0E0,ATP5J,Electron transport chain,0.104914,NULL
+A0E0,ATP5L,Electron transport chain,-0.2647,NULL
+A0E0,ATP5O,Electron transport chain,-0.180119,NULL
+A0E0,ATPAF1,Electron transport chain,0.282831,NULL
+A0E0,ATPAF2,Electron transport chain,-0.715193,NULL
+A0E0,ATPIF1,Electron transport chain,0.430703,NULL
+A0E0,BCS1L,Electron transport chain,0.0473215,NULL
+A0E0,C1orf31,Electron transport chain,0.0781323,NULL
+A0E0,C20orf7,Electron transport chain,0.52962,NULL
+A0E0,C2orf56,Electron transport chain,0.586881,NULL
+A0E0,C7orf44,Electron transport chain,0.049345,NULL
+A0E0,C8orf38,Electron transport chain,0.561941,NULL
+A0E0,CCDC56,Electron transport chain,-0.758637,NULL
+A0E0,CHCHD8,Electron transport chain,0.489766,NULL
+A0E0,COA5,Electron transport chain,-1.22807,NULL
+A0E0,COX10,Electron transport chain,0.172208,NULL
+A0E0,COX11,Electron transport chain,-0.195878,NULL
+A0E0,COX14,Electron transport chain,-0.192535,NULL
+A0E0,COX15,Electron transport chain,0.235603,NULL
+A0E0,COX17,Electron transport chain,0.810194,NULL
+A0E0,COX18,Electron transport chain,-0.912403,NULL
+A0E0,COX19,Electron transport chain,1.15018,NULL
+A0E0,COX20,Electron transport chain,-0.0240571,NULL
+A0E0,COX4I1,Electron transport chain,-0.44163,NULL
+A0E0,COX4I2,Electron transport chain,-0.719541,NULL
+A0E0,COX5A,Electron transport chain,1.02218,NULL
+A0E0,COX5B,Electron transport chain,-0.111076,NULL
+A0E0,COX6A1,Electron transport chain,-0.223485,NULL
+A0E0,COX6A2,Electron transport chain,inf,NULL
+A0E0,COX6B1,Electron transport chain,0.728014,NULL
+A0E0,COX6B2,Electron transport chain,-1.5297,NULL
+A0E0,COX6C,Electron transport chain,-0.319553,NULL
+A0E0,COX7A1,Electron transport chain,-2.90567,NULL
+A0E0,COX7A2,Electron transport chain,0.269067,NULL
+A0E0,COX7B,Electron transport chain,0.842462,NULL
+A0E0,COX7B2,Electron transport chain,0,NULL
+A0E0,COX7C,Electron transport chain,0.195176,NULL
+A0E0,COX8A,Electron transport chain,1.10402,NULL
+A0E0,CYC1,Electron transport chain,1.03901,NULL
+A0E0,FOXRED1,Electron transport chain,-0.295798,NULL
+A0E0,HCCS,Electron transport chain,0.506703,NULL
+A0E0,MNF1,Electron transport chain,0.242147,NULL
+A0E0,NDUFA1,Electron transport chain,0.522136,NULL
+A0E0,NDUFA10,Electron transport chain,-0.542524,NULL
+A0E0,NDUFA11,Electron transport chain,-0.237064,NULL
+A0E0,NDUFA12,Electron transport chain,-0.37146,NULL
+A0E0,NDUFA13,Electron transport chain,-0.215998,NULL
+A0E0,NDUFA2,Electron transport chain,0.515418,NULL
+A0E0,NDUFA3,Electron transport chain,1.45253,NULL
+A0E0,NDUFA4,Electron transport chain,0.240434,NULL
+A0E0,NDUFA5,Electron transport chain,-0.0588084,NULL
+A0E0,NDUFA6,Electron transport chain,-0.324029,NULL
+A0E0,NDUFA7,Electron transport chain,-0.302194,NULL
+A0E0,NDUFA8,Electron transport chain,0.0224935,NULL
+A0E0,NDUFA9,Electron transport chain,0.345847,NULL
+A0E0,NDUFAB1,Electron transport chain,0.501081,NULL
+A0E0,NDUFAF1,Electron transport chain,-0.661494,NULL
+A0E0,NDUFAF2,Electron transport chain,-0.428544,NULL
+A0E0,NDUFAF3,Electron transport chain,0.888826,NULL
+A0E0,NDUFAF4,Electron transport chain,0.670366,NULL
+A0E0,NDUFB1,Electron transport chain,0.0133824,NULL
+A0E0,NDUFB10,Electron transport chain,-0.0753712,NULL
+A0E0,NDUFB11,Electron transport chain,1.24484,NULL
+A0E0,NDUFB2,Electron transport chain,1.08949,NULL
+A0E0,NDUFB3,Electron transport chain,0.091366,NULL
+A0E0,NDUFB4,Electron transport chain,-0.130364,NULL
+A0E0,NDUFB5,Electron transport chain,0.0646145,NULL
+A0E0,NDUFB6,Electron transport chain,0.0447196,NULL
+A0E0,NDUFB7,Electron transport chain,-0.402136,NULL
+A0E0,NDUFB8,Electron transport chain,1.14924,NULL
+A0E0,NDUFB9,Electron transport chain,0.396719,NULL
+A0E0,NDUFC1,Electron transport chain,-0.151029,NULL
+A0E0,NDUFS1,Electron transport chain,0.0998737,NULL
+A0E0,NDUFS2,Electron transport chain,1.42175,NULL
+A0E0,NDUFS3,Electron transport chain,0.359361,NULL
+A0E0,NDUFS4,Electron transport chain,-0.71386,NULL
+A0E0,NDUFS5,Electron transport chain,0.647668,NULL
+A0E0,NDUFS6,Electron transport chain,-0.635528,NULL
+A0E0,NDUFS7,Electron transport chain,0.432353,NULL
+A0E0,NDUFS8,Electron transport chain,0.391885,NULL
+A0E0,NDUFV1,Electron transport chain,0.518696,NULL
+A0E0,NDUFV2,Electron transport chain,0.331184,NULL
+A0E0,NDUFV3,Electron transport chain,1.11882,NULL
+A0E0,NUBPL,Electron transport chain,-0.915977,NULL
+A0E0,PTCD2,Electron transport chain,-1.03424,NULL
+A0E0,SCO1,Electron transport chain,-0.13404,NULL
+A0E0,SDHAF1,Electron transport chain,0.881897,NULL
+A0E0,SDHAF2,Electron transport chain,0.613259,NULL
+A0E0,SELRC1,Electron transport chain,0.662211,NULL
+A0E0,SURF1,Electron transport chain,-1.06659,NULL
+A0E0,TMEM126B,Electron transport chain,1.11579,NULL
+A0E0,TMEM70,Electron transport chain,0.745742,NULL
+A0E0,TTC19,Electron transport chain,-1.03582,NULL
+A0E0,UQCC,Electron transport chain,0.651013,NULL
+A0E0,UQCR10,Electron transport chain,0.207093,NULL
+A0E0,UQCR11,Electron transport chain,-0.20804,NULL
+A0E0,UQCRB,Electron transport chain,-0.417869,NULL
+A0E0,UQCRC1,Electron transport chain,0.185686,NULL
+A0E0,UQCRC2,Electron transport chain,-0.579365,NULL
+A0E0,UQCRFS1,Electron transport chain,0.217607,NULL
+A0E0,UQCRH,Electron transport chain,1.15892,NULL
+A0E0,UQCRQ,Electron transport chain,-0.612026,NULL
+A0B3,ACAA2,Fatty acid beta-oxidation,0.40366,NULL
+A0B3,ACAD10,Fatty acid beta-oxidation,-0.725308,NULL
+A0B3,ACAD8,Fatty acid beta-oxidation,-0.282786,NULL
+A0B3,ACADL,Fatty acid beta-oxidation,-1.16383,NULL
+A0B3,ACADM,Fatty acid beta-oxidation,-0.26948,NULL
+A0B3,ACADS,Fatty acid beta-oxidation,-1.63515,NULL
+A0B3,ACADSB,Fatty acid beta-oxidation,-2.75515,NULL
+A0B3,ACADVL,Fatty acid beta-oxidation,-0.601378,NULL
+A0B3,ACSBG1,Fatty acid beta-oxidation,-0.22976,NULL
+A0B3,ACSBG2,Fatty acid beta-oxidation,-3.18325,NULL
+A0B3,ACSL1,Fatty acid beta-oxidation,-1.48149,NULL
+A0B3,ACSL3,Fatty acid beta-oxidation,0.326249,NULL
+A0B3,ACSL4,Fatty acid beta-oxidation,0.865917,NULL
+A0B3,ACSL5,Fatty acid beta-oxidation,-0.231019,NULL
+A0B3,ACSL6,Fatty acid beta-oxidation,0.350921,NULL
+A0B3,ACSM1,Fatty acid beta-oxidation,-2.97083,NULL
+A0B3,ACSM2A,Fatty acid beta-oxidation,-inf,NULL
+A0B3,ACSM2B,Fatty acid beta-oxidation,-inf,NULL
+A0B3,ACSM3,Fatty acid beta-oxidation,-3.49615,NULL
+A0B3,ACSM4,Fatty acid beta-oxidation,inf,NULL
+A0B3,ACSM5,Fatty acid beta-oxidation,-4.18029,NULL
+A0B3,ACSS1,Fatty acid beta-oxidation,-1.90034,NULL
+A0B3,ACSS2,Fatty acid beta-oxidation,-0.940941,NULL
+A0B3,ACSS3,Fatty acid beta-oxidation,-2.04938,NULL
+A0B3,C10orf129,Fatty acid beta-oxidation,-inf,NULL
+A0B3,CD36,Fatty acid beta-oxidation,-5.202,NULL
+A0B3,CPT1A,Fatty acid beta-oxidation,-0.94388,NULL
+A0B3,CPT1C,Fatty acid beta-oxidation,0.839912,NULL
+A0B3,CPT2,Fatty acid beta-oxidation,0.713767,NULL
+A0B3,CRAT,Fatty acid beta-oxidation,-0.0242623,NULL
+A0B3,DECR1,Fatty acid beta-oxidation,0.462531,NULL
+A0B3,ECHS1,Fatty acid beta-oxidation,0.11638,NULL
+A0B3,FABP1,Fatty acid beta-oxidation,-inf,NULL
+A0B3,FABP12,Fatty acid beta-oxidation,0,NULL
+A0B3,FABP2,Fatty acid beta-oxidation,-inf,NULL
+A0B3,FABP3,Fatty acid beta-oxidation,1.28318,NULL
+A0B3,FABP4,Fatty acid beta-oxidation,-4.63906,NULL
+A0B3,FABP5,Fatty acid beta-oxidation,1.37264,NULL
+A0B3,FABP6,Fatty acid beta-oxidation,1.5532,NULL
+A0B3,FABP7,Fatty acid beta-oxidation,-1.67416,NULL
+A0B3,FABP9,Fatty acid beta-oxidation,0,NULL
+A0B3,GOT2,Fatty acid beta-oxidation,0.137082,NULL
+A0B3,HADH,Fatty acid beta-oxidation,-0.417173,NULL
+A0B3,HADHA,Fatty acid beta-oxidation,0.879447,NULL
+A0B3,HADHB,Fatty acid beta-oxidation,0.397279,NULL
+A0B3,SLC25A20,Fatty acid beta-oxidation,-0.554678,NULL
+A0B3,SLC27A1,Fatty acid beta-oxidation,-1.56458,NULL
+A0B3,SLC27A2,Fatty acid beta-oxidation,0.297258,NULL
+A0B3,SLC27A3,Fatty acid beta-oxidation,0.401361,NULL
+A0B3,SLC27A4,Fatty acid beta-oxidation,0.861396,NULL
+A0B3,SLC27A5,Fatty acid beta-oxidation,0.388937,NULL
+A0B3,SLC27A6,Fatty acid beta-oxidation,-1.04798,NULL
+A0E0,ACAA2,Fatty acid beta-oxidation,1.26797,NULL
+A0E0,ACAD10,Fatty acid beta-oxidation,-0.843671,NULL
+A0E0,ACAD8,Fatty acid beta-oxidation,-0.30014,NULL
+A0E0,ACADL,Fatty acid beta-oxidation,-1.93739,NULL
+A0E0,ACADM,Fatty acid beta-oxidation,-0.406874,NULL
+A0E0,ACADS,Fatty acid beta-oxidation,-1.22161,NULL
+A0E0,ACADSB,Fatty acid beta-oxidation,-1.63559,NULL
+A0E0,ACADVL,Fatty acid beta-oxidation,-0.70995,NULL
+A0E0,ACSBG1,Fatty acid beta-oxidation,8.00092,NULL
+A0E0,ACSBG2,Fatty acid beta-oxidation,-2.97334,NULL
+A0E0,ACSL1,Fatty acid beta-oxidation,-0.0521759,NULL
+A0E0,ACSL3,Fatty acid beta-oxidation,-1.49538,NULL
+A0E0,ACSL4,Fatty acid beta-oxidation,-2.04338,NULL
+A0E0,ACSL5,Fatty acid beta-oxidation,2.65928,NULL
+A0E0,ACSL6,Fatty acid beta-oxidation,-2.47223,NULL
+A0E0,ACSM1,Fatty acid beta-oxidation,-4.14101,NULL
+A0E0,ACSM2A,Fatty acid beta-oxidation,0,NULL
+A0E0,ACSM2B,Fatty acid beta-oxidation,-inf,NULL
+A0E0,ACSM3,Fatty acid beta-oxidation,0.655502,NULL
+A0E0,ACSM4,Fatty acid beta-oxidation,-inf,NULL
+A0E0,ACSM5,Fatty acid beta-oxidation,-3.03331,NULL
+A0E0,ACSS1,Fatty acid beta-oxidation,1.64557,NULL
+A0E0,ACSS2,Fatty acid beta-oxidation,1.27751,NULL
+A0E0,ACSS3,Fatty acid beta-oxidation,-2.34807,NULL
+A0E0,C10orf129,Fatty acid beta-oxidation,inf,NULL
+A0E0,CD36,Fatty acid beta-oxidation,-3.06802,NULL
+A0E0,CPT1A,Fatty acid beta-oxidation,-0.895571,NULL
+A0E0,CPT1C,Fatty acid beta-oxidation,1.0911,NULL
+A0E0,CPT2,Fatty acid beta-oxidation,0.611305,NULL
+A0E0,CRAT,Fatty acid beta-oxidation,2.72006,NULL
+A0E0,DECR1,Fatty acid beta-oxidation,0.639701,NULL
+A0E0,ECHS1,Fatty acid beta-oxidation,0.248603,NULL
+A0E0,FABP1,Fatty acid beta-oxidation,0,NULL
+A0E0,FABP12,Fatty acid beta-oxidation,0,NULL
+A0E0,FABP2,Fatty acid beta-oxidation,inf,NULL
+A0E0,FABP3,Fatty acid beta-oxidation,3.05893,NULL
+A0E0,FABP4,Fatty acid beta-oxidation,-9.38296,NULL
+A0E0,FABP5,Fatty acid beta-oxidation,2.01373,NULL
+A0E0,FABP6,Fatty acid beta-oxidation,2.34714,NULL
+A0E0,FABP7,Fatty acid beta-oxidation,-4.3717,NULL
+A0E0,FABP9,Fatty acid beta-oxidation,0,NULL
+A0E0,GOT2,Fatty acid beta-oxidation,-0.933585,NULL
+A0E0,HADH,Fatty acid beta-oxidation,-0.379079,NULL
+A0E0,HADHA,Fatty acid beta-oxidation,0.513693,NULL
+A0E0,HADHB,Fatty acid beta-oxidation,1.09425,NULL
+A0E0,SLC25A20,Fatty acid beta-oxidation,-1.11313,NULL
+A0E0,SLC27A1,Fatty acid beta-oxidation,-3.48861,NULL
+A0E0,SLC27A2,Fatty acid beta-oxidation,-3.54376,NULL
+A0E0,SLC27A3,Fatty acid beta-oxidation,-0.587492,NULL
+A0E0,SLC27A4,Fatty acid beta-oxidation,0.993018,NULL
+A0E0,SLC27A5,Fatty acid beta-oxidation,-0.611862,NULL
+A0E0,SLC27A6,Fatty acid beta-oxidation,-0.301701,NULL
+A0B3,ABCB7,Fe-S cluster biosynthesis,0.229874,NULL
+A0B3,BOLA3,Fe-S cluster biosynthesis,2.07267,NULL
+A0B3,CIAO1,Fe-S cluster biosynthesis,0.276429,NULL
+A0B3,CIAPIN1,Fe-S cluster biosynthesis,1.13104,NULL
+A0B3,FAM96A,Fe-S cluster biosynthesis,1.07943,NULL
+A0B3,FAM96B,Fe-S cluster biosynthesis,0.971149,NULL
+A0B3,FDX1,Fe-S cluster biosynthesis,0.690248,NULL
+A0B3,FDX1L,Fe-S cluster biosynthesis,0.762408,NULL
+A0B3,FDXR,Fe-S cluster biosynthesis,0.149854,NULL
+A0B3,FTMT,Fe-S cluster biosynthesis,-inf,NULL
+A0B3,FXN,Fe-S cluster biosynthesis,0.843014,NULL
+A0B3,GLRX5,Fe-S cluster biosynthesis,0.895898,NULL
+A0B3,HSCB,Fe-S cluster biosynthesis,-0.522472,NULL
+A0B3,IBA57,Fe-S cluster biosynthesis,0.580089,NULL
+A0B3,ISCA1,Fe-S cluster biosynthesis,-0.521055,NULL
+A0B3,ISCA2,Fe-S cluster biosynthesis,0.323617,NULL
+A0B3,ISCU,Fe-S cluster biosynthesis,-0.634045,NULL
+A0B3,LYRM4,Fe-S cluster biosynthesis,1.20313,NULL
+A0B3,MMS19,Fe-S cluster biosynthesis,0.143238,NULL
+A0B3,NARF,Fe-S cluster biosynthesis,1.46502,NULL
+A0B3,NFS1,Fe-S cluster biosynthesis,-0.106061,NULL
+A0B3,NFU1,Fe-S cluster biosynthesis,-0.18478,NULL
+A0B3,NUBP1,Fe-S cluster biosynthesis,0.65986,NULL
+A0B3,NUBP2,Fe-S cluster biosynthesis,0.800932,NULL
+A0B3,SLC25A28,Fe-S cluster biosynthesis,0.378154,NULL
+A0B3,SLC25A37,Fe-S cluster biosynthesis,0.715351,NULL
+A0E0,ABCB7,Fe-S cluster biosynthesis,-0.0182256,NULL
+A0E0,BOLA3,Fe-S cluster biosynthesis,1.27924,NULL
+A0E0,CIAO1,Fe-S cluster biosynthesis,-0.508707,NULL
+A0E0,CIAPIN1,Fe-S cluster biosynthesis,0.0327531,NULL
+A0E0,FAM96A,Fe-S cluster biosynthesis,-0.368273,NULL
+A0E0,FAM96B,Fe-S cluster biosynthesis,0.410272,NULL
+A0E0,FDX1,Fe-S cluster biosynthesis,1.18904,NULL
+A0E0,FDX1L,Fe-S cluster biosynthesis,0.0935971,NULL
+A0E0,FDXR,Fe-S cluster biosynthesis,1.54581,NULL
+A0E0,FTMT,Fe-S cluster biosynthesis,-inf,NULL
+A0E0,FXN,Fe-S cluster biosynthesis,0.797514,NULL
+A0E0,GLRX5,Fe-S cluster biosynthesis,-0.129623,NULL
+A0E0,HSCB,Fe-S cluster biosynthesis,-1.35824,NULL
+A0E0,IBA57,Fe-S cluster biosynthesis,0.0237339,NULL
+A0E0,ISCA1,Fe-S cluster biosynthesis,-1.05115,NULL
+A0E0,ISCA2,Fe-S cluster biosynthesis,-0.629057,NULL
+A0E0,ISCU,Fe-S cluster biosynthesis,-0.898028,NULL
+A0E0,LYRM4,Fe-S cluster biosynthesis,-1.11883,NULL
+A0E0,MMS19,Fe-S cluster biosynthesis,0.0649043,NULL
+A0E0,NARF,Fe-S cluster biosynthesis,0.864564,NULL
+A0E0,NFS1,Fe-S cluster biosynthesis,0.925628,NULL
+A0E0,NFU1,Fe-S cluster biosynthesis,-0.573679,NULL
+A0E0,NUBP1,Fe-S cluster biosynthesis,-0.511596,NULL
+A0E0,NUBP2,Fe-S cluster biosynthesis,-0.146364,NULL
+A0E0,SLC25A28,Fe-S cluster biosynthesis,0.274485,NULL
+A0E0,SLC25A37,Fe-S cluster biosynthesis,1.70479,NULL
+A0B3,DLAT,Formation of Acetyl CoA,0.70564,NULL
+A0B3,PDHA1,Formation of Acetyl CoA,1.76471,NULL
+A0B3,PDHA2,Formation of Acetyl CoA,0,NULL
+A0B3,PDHB,Formation of Acetyl CoA,0.548705,NULL
+A0B3,PDHX,Formation of Acetyl CoA,0.0480493,NULL
+A0E0,DLAT,Formation of Acetyl CoA,2.08715,NULL
+A0E0,PDHA1,Formation of Acetyl CoA,1.40372,NULL
+A0E0,PDHA2,Formation of Acetyl CoA,0,NULL
+A0E0,PDHB,Formation of Acetyl CoA,-0.0969496,NULL
+A0E0,PDHX,Formation of Acetyl CoA,0.541876,NULL
+A0B3,ALDOA,Glycolysis,2.01731,NULL
+A0B3,ALDOB,Glycolysis,-1.62012,NULL
+A0B3,ALDOC,Glycolysis,-1.27087,NULL
+A0B3,ENO1,Glycolysis,2.22541,NULL
+A0B3,ENO2,Glycolysis,1.77784,NULL
+A0B3,ENO3,Glycolysis,-0.820352,NULL
+A0B3,GAPDH,Glycolysis,2.52577,NULL
+A0B3,GAPDHS,Glycolysis,-1.4208,NULL
+A0B3,GCK,Glycolysis,-1.68076,NULL
+A0B3,GPI,Glycolysis,2.40188,chr19 34870465 A>G Missense_Mutation
+A0B3,HK1,Glycolysis,0.941375,NULL
+A0B3,HK2,Glycolysis,0.336952,NULL
+A0B3,HK3,Glycolysis,2.93919,NULL
+A0B3,LDHA,Glycolysis,2.19853,NULL
+A0B3,LDHAL6B,Glycolysis,0.570524,NULL
+A0B3,LDHB,Glycolysis,0.168797,NULL
+A0B3,LDHC,Glycolysis,-inf,NULL
+A0B3,PFKL,Glycolysis,1.03169,NULL
+A0B3,PFKM,Glycolysis,-0.904793,NULL
+A0B3,PFKP,Glycolysis,3.30321,NULL
+A0B3,PGAM1,Glycolysis,1.52466,NULL
+A0B3,PGAM2,Glycolysis,-2.55092,NULL
+A0B3,PGK1,Glycolysis,2.75028,NULL
+A0B3,PGK2,Glycolysis,0,NULL
+A0B3,PKLR,Glycolysis,0.675191,NULL
+A0B3,PKM2,Glycolysis,1.79527,NULL
+A0B3,SLC2A1,Glycolysis,3.10637,NULL
+A0B3,SLC2A2,Glycolysis,0,NULL
+A0B3,SLC2A3,Glycolysis,1.72146,NULL
+A0B3,SLC2A4,Glycolysis,-3.83732,NULL
+A0B3,SLC2A5,Glycolysis,4.05864,NULL
+A0B3,TPI1,Glycolysis,2.1432,NULL
+A0E0,ALDOA,Glycolysis,0.0750802,NULL
+A0E0,ALDOB,Glycolysis,-inf,NULL
+A0E0,ALDOC,Glycolysis,-1.8972,NULL
+A0E0,ENO1,Glycolysis,0.401279,NULL
+A0E0,ENO2,Glycolysis,-1.36731,NULL
+A0E0,ENO3,Glycolysis,-1.22552,NULL
+A0E0,GAPDH,Glycolysis,0.984258,NULL
+A0E0,GAPDHS,Glycolysis,-0.273811,NULL
+A0E0,GCK,Glycolysis,-3.91496,NULL
+A0E0,GPI,Glycolysis,1.13324,NULL
+A0E0,HK1,Glycolysis,-0.723335,NULL
+A0E0,HK2,Glycolysis,0.772247,NULL
+A0E0,HK3,Glycolysis,3.42278,NULL
+A0E0,LDHA,Glycolysis,-0.468735,NULL
+A0E0,LDHAL6B,Glycolysis,-inf,NULL
+A0E0,LDHB,Glycolysis,-0.504465,NULL
+A0E0,LDHC,Glycolysis,3.19404,NULL
+A0E0,PFKL,Glycolysis,0.666057,NULL
+A0E0,PFKM,Glycolysis,-2.14112,NULL
+A0E0,PFKP,Glycolysis,0.263065,NULL
+A0E0,PGAM1,Glycolysis,0.563237,NULL
+A0E0,PGAM2,Glycolysis,-2.6408,NULL
+A0E0,PGK1,Glycolysis,0.444271,NULL
+A0E0,PGK2,Glycolysis,0,NULL
+A0E0,PKLR,Glycolysis,5.03143,NULL
+A0E0,PKM2,Glycolysis,-0.185768,NULL
+A0E0,SLC2A1,Glycolysis,2.5969,NULL
+A0E0,SLC2A2,Glycolysis,0,NULL
+A0E0,SLC2A3,Glycolysis,0.052092,NULL
+A0E0,SLC2A4,Glycolysis,-5.26471,NULL
+A0E0,SLC2A5,Glycolysis,0.426726,NULL
+A0E0,TPI1,Glycolysis,1.05102,NULL
+A0B3,ALAD,Heme Biosynthesis,-1.60579,NULL
+A0B3,ALAS1,Heme Biosynthesis,0.898203,NULL
+A0B3,ALAS2,Heme Biosynthesis,-inf,NULL
+A0B3,CPOX,Heme Biosynthesis,-0.629619,NULL
+A0B3,FECH,Heme Biosynthesis,0.478512,NULL
+A0B3,HMBS,Heme Biosynthesis,1.96134,NULL
+A0B3,PPOX,Heme Biosynthesis,0.719894,NULL
+A0B3,UROD,Heme Biosynthesis,0.0816563,NULL
+A0B3,UROS,Heme Biosynthesis,1.21305,NULL
+A0E0,ALAD,Heme Biosynthesis,-1.77266,NULL
+A0E0,ALAS1,Heme Biosynthesis,2.14366,NULL
+A0E0,ALAS2,Heme Biosynthesis,-inf,NULL
+A0E0,CPOX,Heme Biosynthesis,0.808706,NULL
+A0E0,FECH,Heme Biosynthesis,0.732838,NULL
+A0E0,HMBS,Heme Biosynthesis,-0.0933771,NULL
+A0E0,PPOX,Heme Biosynthesis,1.42754,NULL
+A0E0,UROD,Heme Biosynthesis,-0.936095,NULL
+A0E0,UROS,Heme Biosynthesis,0.269124,NULL
+A0B3,CHCHD4,Import & Sorting,0.408895,NULL
+A0B3,DNAJC19,Import & Sorting,0.406486,NULL
+A0B3,GFER,Import & Sorting,0.930197,NULL
+A0B3,GRPEL1,Import & Sorting,0.604946,NULL
+A0B3,GRPEL2,Import & Sorting,-0.227143,NULL
+A0B3,HSPA9,Import & Sorting,0.048628,NULL
+A0B3,IMMP1L,Import & Sorting,0.30903,NULL
+A0B3,IMMP2L,Import & Sorting,-0.446565,NULL
+A0B3,MIPEP,Import & Sorting,0.0222962,NULL
+A0B3,PMPCA,Import & Sorting,0.471883,NULL
+A0B3,PMPCB,Import & Sorting,0.0868318,NULL
+A0B3,SAMM50,Import & Sorting,-0.0762234,NULL
+A0B3,TIMM10,Import & Sorting,1.05992,NULL
+A0B3,TIMM13,Import & Sorting,0.767924,NULL
+A0B3,TIMM17A,Import & Sorting,1.38735,NULL
+A0B3,TIMM17B,Import & Sorting,1.20059,NULL
+A0B3,TIMM21,Import & Sorting,-0.291687,NULL
+A0B3,TIMM22,Import & Sorting,0.298308,NULL
+A0B3,TIMM23,Import & Sorting,0.919519,NULL
+A0B3,TIMM44,Import & Sorting,0.993345,NULL
+A0B3,TIMM50,Import & Sorting,1.634,NULL
+A0B3,TIMM8A,Import & Sorting,0.961356,NULL
+A0B3,TIMM8B,Import & Sorting,1.16324,NULL
+A0B3,TIMM9,Import & Sorting,0.193481,NULL
+A0B3,TOMM20,Import & Sorting,0.405408,NULL
+A0B3,TOMM22,Import & Sorting,1.06125,NULL
+A0B3,TOMM40,Import & Sorting,2.59693,NULL
+A0B3,TOMM40L,Import & Sorting,1.40358,NULL
+A0B3,TOMM5,Import & Sorting,1.08688,NULL
+A0B3,TOMM6,Import & Sorting,1.24343,NULL
+A0B3,TOMM7,Import & Sorting,-0.659959,NULL
+A0B3,TOMM70A,Import & Sorting,0.0839098,NULL
+A0E0,CHCHD4,Import & Sorting,-0.299496,NULL
+A0E0,DNAJC19,Import & Sorting,0.0723611,NULL
+A0E0,GFER,Import & Sorting,-0.0321525,NULL
+A0E0,GRPEL1,Import & Sorting,0.583352,NULL
+A0E0,GRPEL2,Import & Sorting,0.40521,NULL
+A0E0,HSPA9,Import & Sorting,0.420906,NULL
+A0E0,IMMP1L,Import & Sorting,-0.715692,NULL
+A0E0,IMMP2L,Import & Sorting,-1.23201,NULL
+A0E0,MIPEP,Import & Sorting,-1.51988,NULL
+A0E0,PMPCA,Import & Sorting,0.511111,NULL
+A0E0,PMPCB,Import & Sorting,0.256634,NULL
+A0E0,SAMM50,Import & Sorting,-0.118725,NULL
+A0E0,TIMM10,Import & Sorting,0.770685,NULL
+A0E0,TIMM13,Import & Sorting,-0.169722,NULL
+A0E0,TIMM17A,Import & Sorting,0.478861,NULL
+A0E0,TIMM17B,Import & Sorting,1.79683,NULL
+A0E0,TIMM21,Import & Sorting,0.447062,NULL
+A0E0,TIMM22,Import & Sorting,-0.359062,NULL
+A0E0,TIMM23,Import & Sorting,0.924364,NULL
+A0E0,TIMM44,Import & Sorting,0.513317,NULL
+A0E0,TIMM50,Import & Sorting,0.948345,NULL
+A0E0,TIMM8A,Import & Sorting,1.487,NULL
+A0E0,TIMM8B,Import & Sorting,1.12892,NULL
+A0E0,TIMM9,Import & Sorting,-0.0503903,NULL
+A0E0,TOMM20,Import & Sorting,-0.591532,NULL
+A0E0,TOMM22,Import & Sorting,-0.281211,NULL
+A0E0,TOMM40,Import & Sorting,1.56097,NULL
+A0E0,TOMM40L,Import & Sorting,1.66002,NULL
+A0E0,TOMM5,Import & Sorting,1.10028,NULL
+A0E0,TOMM6,Import & Sorting,0.801816,NULL
+A0E0,TOMM7,Import & Sorting,0.0220166,NULL
+A0E0,TOMM70A,Import & Sorting,0.658624,NULL
+A0B3,AFG3L2,Mitochondrial Dynamics,0.415254,NULL
+A0B3,AMBRA1,Mitochondrial Dynamics,-0.0444702,NULL
+A0B3,BECN1,Mitochondrial Dynamics,-0.405011,NULL
+A0B3,BNIP3,Mitochondrial Dynamics,1.36473,NULL
+A0B3,BNIP3L,Mitochondrial Dynamics,-0.0532373,NULL
+A0B3,DNM1L,Mitochondrial Dynamics,0.0997192,NULL
+A0B3,DYNLL1,Mitochondrial Dynamics,1.47883,NULL
+A0B3,FIS1,Mitochondrial Dynamics,0.149087,NULL
+A0B3,GABARAP,Mitochondrial Dynamics,0.164268,NULL
+A0B3,GDAP1,Mitochondrial Dynamics,-0.480282,NULL
+A0B3,KIF1B,Mitochondrial Dynamics,0.0151584,NULL
+A0B3,KIF5B,Mitochondrial Dynamics,-0.387632,NULL
+A0B3,MAP1LC3A,Mitochondrial Dynamics,0.206579,NULL
+A0B3,MARCH5,Mitochondrial Dynamics,-0.682873,NULL
+A0B3,MFF,Mitochondrial Dynamics,0.12232,NULL
+A0B3,MFN1,Mitochondrial Dynamics,0.432642,NULL
+A0B3,MFN2,Mitochondrial Dynamics,0.900322,NULL
+A0B3,MSTO1,Mitochondrial Dynamics,1.12205,NULL
+A0B3,MTFP1,Mitochondrial Dynamics,1.36323,NULL
+A0B3,OMA1,Mitochondrial Dynamics,-0.520391,NULL
+A0B3,OPA1,Mitochondrial Dynamics,0.765627,NULL
+A0B3,OPA3,Mitochondrial Dynamics,0.54829,NULL
+A0B3,PARK2,Mitochondrial Dynamics,-3.27276,NULL
+A0B3,PARL,Mitochondrial Dynamics,0.948946,NULL
+A0B3,PINK1,Mitochondrial Dynamics,-0.542114,NULL
+A0B3,PKIA,Mitochondrial Dynamics,-1.62389,NULL
+A0B3,PLD6,Mitochondrial Dynamics,0.754868,NULL
+A0B3,RHOT1,Mitochondrial Dynamics,-0.591223,NULL
+A0B3,RHOT2,Mitochondrial Dynamics,0.336456,NULL
+A0B3,SH3GLB1,Mitochondrial Dynamics,0.230565,NULL
+A0B3,SPG7,Mitochondrial Dynamics,-0.41681,NULL
+A0B3,SQSTM1,Mitochondrial Dynamics,0.485082,NULL
+A0B3,STOML2,Mitochondrial Dynamics,0.889216,NULL
+A0B3,SYBU,Mitochondrial Dynamics,-3.40929,NULL
+A0B3,TRAK1,Mitochondrial Dynamics,-1.46603,NULL
+A0B3,TRAK2,Mitochondrial Dynamics,-0.957527,NULL
+A0B3,TRAP1,Mitochondrial Dynamics,0.883667,NULL
+A0B3,YME1L1,Mitochondrial Dynamics,0.148681,NULL
+A0E0,AFG3L2,Mitochondrial Dynamics,1.6475,NULL
+A0E0,AMBRA1,Mitochondrial Dynamics,-0.229602,NULL
+A0E0,BECN1,Mitochondrial Dynamics,-1.6468,NULL
+A0E0,BNIP3,Mitochondrial Dynamics,2.2642,NULL
+A0E0,BNIP3L,Mitochondrial Dynamics,0.499991,NULL
+A0E0,DNM1L,Mitochondrial Dynamics,1.02734,NULL
+A0E0,DYNLL1,Mitochondrial Dynamics,0.218365,NULL
+A0E0,FIS1,Mitochondrial Dynamics,-0.265596,NULL
+A0E0,GABARAP,Mitochondrial Dynamics,-0.323693,NULL
+A0E0,GDAP1,Mitochondrial Dynamics,-0.601211,NULL
+A0E0,KIF1B,Mitochondrial Dynamics,1.50557,NULL
+A0E0,KIF5B,Mitochondrial Dynamics,-0.015195,NULL
+A0E0,MAP1LC3A,Mitochondrial Dynamics,1.81947,NULL
+A0E0,MARCH5,Mitochondrial Dynamics,0.27084,NULL
+A0E0,MFF,Mitochondrial Dynamics,-0.431555,NULL
+A0E0,MFN1,Mitochondrial Dynamics,0.282983,NULL
+A0E0,MFN2,Mitochondrial Dynamics,0.795876,NULL
+A0E0,MSTO1,Mitochondrial Dynamics,2.36212,NULL
+A0E0,MTFP1,Mitochondrial Dynamics,0.0564084,NULL
+A0E0,OMA1,Mitochondrial Dynamics,-0.297562,NULL
+A0E0,OPA1,Mitochondrial Dynamics,0.891422,NULL
+A0E0,OPA3,Mitochondrial Dynamics,0.449533,NULL
+A0E0,PARK2,Mitochondrial Dynamics,-1.26388,NULL
+A0E0,PARL,Mitochondrial Dynamics,0.575422,NULL
+A0E0,PINK1,Mitochondrial Dynamics,-0.47687,NULL
+A0E0,PKIA,Mitochondrial Dynamics,-3.2893,NULL
+A0E0,PLD6,Mitochondrial Dynamics,0.827857,NULL
+A0E0,RHOT1,Mitochondrial Dynamics,-0.857591,NULL
+A0E0,RHOT2,Mitochondrial Dynamics,-0.172313,NULL
+A0E0,SH3GLB1,Mitochondrial Dynamics,0.321741,NULL
+A0E0,SPG7,Mitochondrial Dynamics,0.125253,NULL
+A0E0,SQSTM1,Mitochondrial Dynamics,0.384168,NULL
+A0E0,STOML2,Mitochondrial Dynamics,0.613649,NULL
+A0E0,SYBU,Mitochondrial Dynamics,-4.82087,NULL
+A0E0,TRAK1,Mitochondrial Dynamics,-1.48046,NULL
+A0E0,TRAK2,Mitochondrial Dynamics,-1.57543,NULL
+A0E0,TRAP1,Mitochondrial Dynamics,0.0139383,NULL
+A0E0,YME1L1,Mitochondrial Dynamics,0.511754,NULL
+A0B3,BRP44,Pyruvate transfer,1.47286,NULL
+A0B3,BRP44L,Pyruvate transfer,0.202805,NULL
+A0E0,BRP44,Pyruvate transfer,0.150022,NULL
+A0E0,BRP44L,Pyruvate transfer,0.292934,NULL
+A0B3,BCKDHA,ROS defense,-0.374959,NULL
+A0B3,BCKDHB,ROS defense,-0.892534,NULL
+A0B3,GCLC,ROS defense,-0.285354,NULL
+A0B3,GCLM,ROS defense,1.68503,NULL
+A0B3,GLRX2,ROS defense,1.53533,NULL
+A0B3,GPX1,ROS defense,1.15482,NULL
+A0B3,GPX4,ROS defense,-0.0283357,NULL
+A0B3,GSR,ROS defense,0.0235096,NULL
+A0B3,GSS,ROS defense,0.625739,NULL
+A0B3,GSTA1,ROS defense,-1.74442,NULL
+A0B3,GSTA2,ROS defense,3.81027,NULL
+A0B3,GSTA4,ROS defense,0.763956,NULL
+A0B3,GSTP1,ROS defense,0.618057,NULL
+A0B3,MPV17,ROS defense,0.902866,NULL
+A0B3,MPV17L,ROS defense,-1.96285,NULL
+A0B3,PRDX3,ROS defense,-0.897814,NULL
+A0B3,SHC1,ROS defense,1.19313,NULL
+A0B3,SLC25A1,ROS defense,0.862009,NULL
+A0B3,SOD1,ROS defense,0.585647,NULL
+A0B3,SOD2,ROS defense,0.775879,NULL
+A0B3,TXN2,ROS defense,-0.0307222,NULL
+A0B3,TXNRD2,ROS defense,-0.329739,NULL
+A0E0,BCKDHA,ROS defense,0.707101,NULL
+A0E0,BCKDHB,ROS defense,0.359268,NULL
+A0E0,GCLC,ROS defense,-0.44843,NULL
+A0E0,GCLM,ROS defense,1.00358,NULL
+A0E0,GLRX2,ROS defense,2.55078,NULL
+A0E0,GPX1,ROS defense,-1.48508,NULL
+A0E0,GPX4,ROS defense,0.659997,NULL
+A0E0,GSR,ROS defense,-1.08691,NULL
+A0E0,GSS,ROS defense,0.279893,NULL
+A0E0,GSTA1,ROS defense,-7.91297,NULL
+A0E0,GSTA2,ROS defense,-inf,NULL
+A0E0,GSTA4,ROS defense,-1.34998,NULL
+A0E0,GSTP1,ROS defense,0.228612,NULL
+A0E0,MPV17,ROS defense,-0.180306,NULL
+A0E0,MPV17L,ROS defense,-2.46173,NULL
+A0E0,PRDX3,ROS defense,-0.392619,NULL
+A0E0,SHC1,ROS defense,1.07498,NULL
+A0E0,SLC25A1,ROS defense,1.73969,NULL
+A0E0,SOD1,ROS defense,-0.568882,NULL
+A0E0,SOD2,ROS defense,0.664383,NULL
+A0E0,TXN2,ROS defense,-0.444135,NULL
+A0E0,TXNRD2,ROS defense,-0.759477,NULL
+A0B3,AK3,Replication & Transcription,-0.548097,NULL
+A0B3,AK4,Replication & Transcription,0.120069,NULL
+A0B3,APEX1,Replication & Transcription,0.0670145,NULL
+A0B3,APEX2,Replication & Transcription,1.28464,NULL
+A0B3,C10orf2,Replication & Transcription,0.17469,NULL
+A0B3,CDK5RAP1,Replication & Transcription,0.261127,NULL
+A0B3,CDKAL1,Replication & Transcription,0.974511,NULL
+A0B3,CMPK2,Replication & Transcription,0.433692,NULL
+A0B3,CREB1,Replication & Transcription,-0.947586,NULL
+A0B3,DUS2L,Replication & Transcription,0.731349,NULL
+A0B3,ELAC2,Replication & Transcription,1.12802,NULL
+A0B3,ENDOG,Replication & Transcription,1.15919,NULL
+A0B3,GTPBP3,Replication & Transcription,0.188213,NULL
+A0B3,HSD17B10,Replication & Transcription,1.34954,NULL
+A0B3,KIAA0391,Replication & Transcription,0.44141,NULL
+A0B3,LIG3,Replication & Transcription,0.292261,NULL
+A0B3,MTO1,Replication & Transcription,0.11699,NULL
+A0B3,MTPAP,Replication & Transcription,-0.0793804,NULL
+A0B3,MUTYH,Replication & Transcription,0.763867,NULL
+A0B3,NFE2L2,Replication & Transcription,-0.135371,NULL
+A0B3,NME3,Replication & Transcription,0.505008,NULL
+A0B3,NME4,Replication & Transcription,1.18598,NULL
+A0B3,NME6,Replication & Transcription,0.0736793,NULL
+A0B3,NRF1,Replication & Transcription,0.0245902,NULL
+A0B3,NSUN2,Replication & Transcription,2.01041,NULL
+A0B3,NTHL1,Replication & Transcription,1.00011,NULL
+A0B3,OGG1,Replication & Transcription,-0.213258,NULL
+A0B3,OSGEPL1,Replication & Transcription,-0.797099,NULL
+A0B3,POLG,Replication & Transcription,0.373695,NULL
+A0B3,POLG2,Replication & Transcription,-0.366144,NULL
+A0B3,POLRMT,Replication & Transcription,-0.103785,NULL
+A0B3,PPARGC1A,Replication & Transcription,-2.05073,NULL
+A0B3,PUS1,Replication & Transcription,1.46151,NULL
+A0B3,PUS3,Replication & Transcription,0.532206,NULL
+A0B3,QTRT1,Replication & Transcription,-0.440428,NULL
+A0B3,QTRTD1,Replication & Transcription,0.0985909,NULL
+A0B3,RMRP,Replication & Transcription,0.453092,NULL
+A0B3,RNASEH1,Replication & Transcription,0.595773,NULL
+A0B3,RPUSD2,Replication & Transcription,-0.128059,NULL
+A0B3,RPUSD4,Replication & Transcription,-0.110404,NULL
+A0B3,RRM2B,Replication & Transcription,0.128983,NULL
+A0B3,SLC25A19,Replication & Transcription,2.3182,NULL
+A0B3,SLC25A3,Replication & Transcription,0.539291,NULL
+A0B3,SLC25A33,Replication & Transcription,0.167654,NULL
+A0B3,SLC29A1,Replication & Transcription,0.394258,NULL
+A0B3,SSBP1,Replication & Transcription,1.09228,NULL
+A0B3,TERT,Replication & Transcription,inf,NULL
+A0B3,TFAM,Replication & Transcription,-0.308446,NULL
+A0B3,TFB1M,Replication & Transcription,0.0373873,NULL
+A0B3,TFB2M,Replication & Transcription,1.15271,NULL
+A0B3,TK2,Replication & Transcription,-0.657213,NULL
+A0B3,TOP1MT,Replication & Transcription,1.63387,NULL
+A0B3,TOP3A,Replication & Transcription,1.03147,NULL
+A0B3,TRIT1,Replication & Transcription,0.554507,NULL
+A0B3,TRMT1,Replication & Transcription,-0.0443811,NULL
+A0B3,TRMT11,Replication & Transcription,-0.269269,NULL
+A0B3,TRMT112,Replication & Transcription,0.977953,NULL
+A0B3,TRMT2B,Replication & Transcription,0.289422,NULL
+A0B3,TRMT5,Replication & Transcription,-0.565409,NULL
+A0B3,TRMT6,Replication & Transcription,1.15682,NULL
+A0B3,TRMT61B,Replication & Transcription,-0.141188,NULL
+A0B3,TRMU,Replication & Transcription,0.475311,NULL
+A0B3,TRNT1,Replication & Transcription,0.322015,NULL
+A0B3,TRUB2,Replication & Transcription,0.449796,NULL
+A0B3,UNG,Replication & Transcription,1.5473,NULL
+A0B3,YRDC,Replication & Transcription,0.388538,NULL
+A0E0,AK3,Replication & Transcription,0.372562,NULL
+A0E0,AK4,Replication & Transcription,-1.10761,NULL
+A0E0,APEX1,Replication & Transcription,-0.941728,NULL
+A0E0,APEX2,Replication & Transcription,1.51891,NULL
+A0E0,C10orf2,Replication & Transcription,0.715453,NULL
+A0E0,CDK5RAP1,Replication & Transcription,0.469092,NULL
+A0E0,CDKAL1,Replication & Transcription,0.19139,NULL
+A0E0,CMPK2,Replication & Transcription,-0.815029,NULL
+A0E0,CREB1,Replication & Transcription,-0.694554,NULL
+A0E0,DUS2L,Replication & Transcription,0.0161559,NULL
+A0E0,ELAC2,Replication & Transcription,-0.377416,NULL
+A0E0,ENDOG,Replication & Transcription,0.675952,NULL
+A0E0,GTPBP3,Replication & Transcription,-0.130431,NULL
+A0E0,HSD17B10,Replication & Transcription,0.424433,NULL
+A0E0,KIAA0391,Replication & Transcription,-0.213853,NULL
+A0E0,LIG3,Replication & Transcription,0.79492,NULL
+A0E0,MTO1,Replication & Transcription,0.114372,NULL
+A0E0,MTPAP,Replication & Transcription,0.697861,NULL
+A0E0,MUTYH,Replication & Transcription,0.714814,NULL
+A0E0,NFE2L2,Replication & Transcription,-0.80649,NULL
+A0E0,NME3,Replication & Transcription,0.506848,NULL
+A0E0,NME4,Replication & Transcription,0.75379,NULL
+A0E0,NME6,Replication & Transcription,1.04049,NULL
+A0E0,NRF1,Replication & Transcription,0.176603,NULL
+A0E0,NSUN2,Replication & Transcription,-0.164674,NULL
+A0E0,NTHL1,Replication & Transcription,0.425434,NULL
+A0E0,OGG1,Replication & Transcription,-0.120112,NULL
+A0E0,OSGEPL1,Replication & Transcription,-1.11737,NULL
+A0E0,POLG,Replication & Transcription,0.0136099,NULL
+A0E0,POLG2,Replication & Transcription,-0.380708,NULL
+A0E0,POLRMT,Replication & Transcription,0.557678,NULL
+A0E0,PPARGC1A,Replication & Transcription,2.56786,NULL
+A0E0,PUS1,Replication & Transcription,0.629118,NULL
+A0E0,PUS3,Replication & Transcription,-0.364462,NULL
+A0E0,QTRT1,Replication & Transcription,-0.327632,NULL
+A0E0,QTRTD1,Replication & Transcription,0.336129,NULL
+A0E0,RMRP,Replication & Transcription,-3.39855,NULL
+A0E0,RNASEH1,Replication & Transcription,2.39132,NULL
+A0E0,RPUSD2,Replication & Transcription,-0.0429899,NULL
+A0E0,RPUSD4,Replication & Transcription,-0.944151,NULL
+A0E0,RRM2B,Replication & Transcription,-1.57094,NULL
+A0E0,SLC25A19,Replication & Transcription,0.936098,NULL
+A0E0,SLC25A3,Replication & Transcription,-0.625736,NULL
+A0E0,SLC25A33,Replication & Transcription,1.86337,NULL
+A0E0,SLC29A1,Replication & Transcription,-0.30909,NULL
+A0E0,SSBP1,Replication & Transcription,1.15723,NULL
+A0E0,TERT,Replication & Transcription,-1.27305,NULL
+A0E0,TFAM,Replication & Transcription,0.112276,NULL
+A0E0,TFB1M,Replication & Transcription,-1.06297,NULL
+A0E0,TFB2M,Replication & Transcription,-0.102649,NULL
+A0E0,TK2,Replication & Transcription,-1.74064,NULL
+A0E0,TOP1MT,Replication & Transcription,0.49537,NULL
+A0E0,TOP3A,Replication & Transcription,0.387539,NULL
+A0E0,TRIT1,Replication & Transcription,0.585857,NULL
+A0E0,TRMT1,Replication & Transcription,-0.291899,NULL
+A0E0,TRMT11,Replication & Transcription,-0.395358,NULL
+A0E0,TRMT112,Replication & Transcription,0.675799,NULL
+A0E0,TRMT2B,Replication & Transcription,1.13565,NULL
+A0E0,TRMT5,Replication & Transcription,-0.36027,NULL
+A0E0,TRMT6,Replication & Transcription,1.05936,NULL
+A0E0,TRMT61B,Replication & Transcription,-0.153186,NULL
+A0E0,TRMU,Replication & Transcription,0.334254,NULL
+A0E0,TRNT1,Replication & Transcription,-0.363133,NULL
+A0E0,TRUB2,Replication & Transcription,0.106828,NULL
+A0E0,UNG,Replication & Transcription,-0.297036,NULL
+A0E0,YRDC,Replication & Transcription,0.50656,NULL
+A0B3,AARS2,Translation,0.52092,NULL
+A0B3,ATAD3A,Translation,1.86242,NULL
+A0B3,ATAD3B,Translation,0.634079,NULL
+A0B3,CARS2,Translation,1.06688,NULL
+A0B3,CLPP,Translation,0.830055,NULL
+A0B3,CLPX,Translation,0.194029,NULL
+A0B3,DAP3,Translation,2.21087,NULL
+A0B3,DARS2,Translation,1.83731,NULL
+A0B3,DDX28,Translation,0.351048,NULL
+A0B3,DHX30,Translation,0.187175,NULL
+A0B3,EARS2,Translation,0.286819,NULL
+A0B3,FARS2,Translation,0.569353,NULL
+A0B3,GARS,Translation,2.41524,NULL
+A0B3,GATC,Translation,-0.403468,NULL
+A0B3,GFM1,Translation,0.778438,NULL
+A0B3,GFM2,Translation,-0.654058,NULL
+A0B3,HARS2,Translation,0.353249,NULL
+A0B3,IARS2,Translation,1.40429,NULL
+A0B3,KARS,Translation,0.799192,NULL
+A0B3,LARS2,Translation,0.076759,NULL
+A0B3,LONP1,Translation,0.761793,NULL
+A0B3,LRPPRC,Translation,0.246053,NULL
+A0B3,MARS2,Translation,0.505788,NULL
+A0B3,MPV17L2,Translation,0.942601,NULL
+A0B3,MRPL1,Translation,0.637935,NULL
+A0B3,MRPL10,Translation,-0.0152807,NULL
+A0B3,MRPL11,Translation,1.09927,NULL
+A0B3,MRPL12,Translation,2.13632,NULL
+A0B3,MRPL13,Translation,2.13421,NULL
+A0B3,MRPL14,Translation,2.18029,NULL
+A0B3,MRPL15,Translation,2.26309,NULL
+A0B3,MRPL16,Translation,0.698579,NULL
+A0B3,MRPL17,Translation,1.36023,NULL
+A0B3,MRPL18,Translation,0.736541,NULL
+A0B3,MRPL19,Translation,0.741129,NULL
+A0B3,MRPL2,Translation,1.3436,NULL
+A0B3,MRPL20,Translation,0.320066,NULL
+A0B3,MRPL21,Translation,0.761512,NULL
+A0B3,MRPL22,Translation,0.35602,NULL
+A0B3,MRPL23,Translation,1.50239,NULL
+A0B3,MRPL24,Translation,1.74556,NULL
+A0B3,MRPL27,Translation,0.818566,NULL
+A0B3,MRPL28,Translation,1.35382,NULL
+A0B3,MRPL3,Translation,0.856046,NULL
+A0B3,MRPL30,Translation,0.0531473,NULL
+A0B3,MRPL32,Translation,0.404326,NULL
+A0B3,MRPL33,Translation,1.43256,NULL
+A0B3,MRPL34,Translation,0.336425,NULL
+A0B3,MRPL35,Translation,0.390084,NULL
+A0B3,MRPL36,Translation,1.88536,NULL
+A0B3,MRPL37,Translation,1.76775,NULL
+A0B3,MRPL38,Translation,0.937364,NULL
+A0B3,MRPL39,Translation,0.812378,NULL
+A0B3,MRPL4,Translation,0.922114,NULL
+A0B3,MRPL40,Translation,0.0154326,NULL
+A0B3,MRPL41,Translation,0.210789,NULL
+A0B3,MRPL42,Translation,0.711619,NULL
+A0B3,MRPL43,Translation,0.0210579,NULL
+A0B3,MRPL44,Translation,0.358688,NULL
+A0B3,MRPL45,Translation,0.0849857,NULL
+A0B3,MRPL46,Translation,0.0797095,NULL
+A0B3,MRPL47,Translation,1.90834,NULL
+A0B3,MRPL48,Translation,1.32153,NULL
+A0B3,MRPL49,Translation,0.400033,NULL
+A0B3,MRPL50,Translation,0.237732,NULL
+A0B3,MRPL51,Translation,1.4124,NULL
+A0B3,MRPL52,Translation,0.670941,NULL
+A0B3,MRPL54,Translation,-0.0964865,NULL
+A0B3,MRPL55,Translation,1.58189,NULL
+A0B3,MRPL9,Translation,2.07116,NULL
+A0B3,MRPS10,Translation,1.48907,NULL
+A0B3,MRPS11,Translation,0.807776,NULL
+A0B3,MRPS12,Translation,2.29663,NULL
+A0B3,MRPS14,Translation,-0.193177,NULL
+A0B3,MRPS15,Translation,0.92489,NULL
+A0B3,MRPS16,Translation,0.567218,NULL
+A0B3,MRPS17,Translation,1.35178,NULL
+A0B3,MRPS18A,Translation,0.83242,NULL
+A0B3,MRPS18B,Translation,0,NULL
+A0B3,MRPS18B,Translation,0,NULL
+A0B3,MRPS18B,Translation,0,NULL
+A0B3,MRPS18B,Translation,0,NULL
+A0B3,MRPS18B,Translation,0,NULL
+A0B3,MRPS18B,Translation,0,NULL
+A0B3,MRPS18B,Translation,0.563777,NULL
+A0B3,MRPS18C,Translation,0.122647,NULL
+A0B3,MRPS2,Translation,0.391858,NULL
+A0B3,MRPS21,Translation,1.96267,NULL
+A0B3,MRPS22,Translation,1.23591,NULL
+A0B3,MRPS23,Translation,1.25898,NULL
+A0B3,MRPS25,Translation,-0.593389,NULL
+A0B3,MRPS26,Translation,0.441372,NULL
+A0B3,MRPS27,Translation,-0.409885,NULL
+A0B3,MRPS28,Translation,0.6252,NULL
+A0B3,MRPS30,Translation,-0.693776,NULL
+A0B3,MRPS31,Translation,0.00344822,NULL
+A0B3,MRPS33,Translation,0.366273,NULL
+A0B3,MRPS34,Translation,1.36291,NULL
+A0B3,MRPS35,Translation,0.491172,NULL
+A0B3,MRPS36,Translation,-0.115121,NULL
+A0B3,MRPS5,Translation,1.51364,NULL
+A0B3,MRPS7,Translation,0.902027,NULL
+A0B3,MRPS9,Translation,0.969667,NULL
+A0B3,MRRF,Translation,0.106906,NULL
+A0B3,MTFMT,Translation,0.71382,NULL
+A0B3,MTIF2,Translation,0.315972,NULL
+A0B3,MTIF3,Translation,-0.186002,NULL
+A0B3,MTRF1,Translation,-0.622704,NULL
+A0B3,MTRF1L,Translation,0.021487,NULL
+A0B3,NARS2,Translation,0.285894,NULL
+A0B3,OXA1L,Translation,-0.2693,NULL
+A0B3,PARS2,Translation,0.229442,NULL
+A0B3,PET112,Translation,-0.330723,NULL
+A0B3,PHB,Translation,0.834119,NULL
+A0B3,PHB2,Translation,0.23232,NULL
+A0B3,PTCD3,Translation,-0.0467881,NULL
+A0B3,QRSL1,Translation,0.163092,NULL
+A0B3,RARS2,Translation,0.628978,NULL
+A0B3,RNASEL,Translation,-0.60904,NULL
+A0B3,SARS2,Translation,0.995064,NULL
+A0B3,TACO1,Translation,1.13077,NULL
+A0B3,TARS2,Translation,1.41834,NULL
+A0B3,TSFM,Translation,0.566096,NULL
+A0B3,TUFM,Translation,0.927833,NULL
+A0B3,VARS2,Translation,0,NULL
+A0B3,VARS2,Translation,0,NULL
+A0B3,VARS2,Translation,0,NULL
+A0B3,VARS2,Translation,0,NULL
+A0B3,VARS2,Translation,0,NULL
+A0B3,VARS2,Translation,0.603817,NULL
+A0B3,WARS2,Translation,-0.163859,NULL
+A0B3,YARS2,Translation,0.577601,NULL
+A0E0,AARS2,Translation,1.4746,NULL
+A0E0,ATAD3A,Translation,1.29926,NULL
+A0E0,ATAD3B,Translation,2.7128,NULL
+A0E0,CARS2,Translation,0.907702,NULL
+A0E0,CLPP,Translation,0.15959,NULL
+A0E0,CLPX,Translation,0.413773,NULL
+A0E0,DAP3,Translation,1.92073,NULL
+A0E0,DARS2,Translation,2.60917,NULL
+A0E0,DDX28,Translation,0.371345,NULL
+A0E0,DHX30,Translation,-0.061472,NULL
+A0E0,EARS2,Translation,-0.43241,NULL
+A0E0,FARS2,Translation,-0.356855,NULL
+A0E0,GARS,Translation,1.50999,NULL
+A0E0,GATC,Translation,0.500055,NULL
+A0E0,GFM1,Translation,-0.52223,NULL
+A0E0,GFM2,Translation,0.517155,NULL
+A0E0,HARS2,Translation,0.0774169,NULL
+A0E0,IARS2,Translation,0.220728,NULL
+A0E0,KARS,Translation,-0.216912,NULL
+A0E0,LARS2,Translation,-0.330278,NULL
+A0E0,LONP1,Translation,0.759129,NULL
+A0E0,LRPPRC,Translation,1.41745,NULL
+A0E0,MARS2,Translation,0.0780868,NULL
+A0E0,MPV17L2,Translation,-0.201894,NULL
+A0E0,MRPL1,Translation,0.156287,NULL
+A0E0,MRPL10,Translation,-1.28341,NULL
+A0E0,MRPL11,Translation,0.245134,NULL
+A0E0,MRPL12,Translation,0.695515,NULL
+A0E0,MRPL13,Translation,0.605495,NULL
+A0E0,MRPL14,Translation,0.882343,NULL
+A0E0,MRPL15,Translation,0.945751,NULL
+A0E0,MRPL16,Translation,0.373246,NULL
+A0E0,MRPL17,Translation,0.590398,NULL
+A0E0,MRPL18,Translation,0.39864,NULL
+A0E0,MRPL19,Translation,1.08898,NULL
+A0E0,MRPL2,Translation,0.486637,NULL
+A0E0,MRPL20,Translation,0.814045,NULL
+A0E0,MRPL21,Translation,0.149736,NULL
+A0E0,MRPL22,Translation,-0.060799,NULL
+A0E0,MRPL23,Translation,0.421959,NULL
+A0E0,MRPL24,Translation,1.53789,NULL
+A0E0,MRPL27,Translation,-0.228845,NULL
+A0E0,MRPL28,Translation,-0.216788,NULL
+A0E0,MRPL3,Translation,0.239574,NULL
+A0E0,MRPL30,Translation,-0.12632,NULL
+A0E0,MRPL32,Translation,-0.243582,NULL
+A0E0,MRPL33,Translation,-0.0853604,NULL
+A0E0,MRPL34,Translation,-1.00473,NULL
+A0E0,MRPL35,Translation,0.0804729,NULL
+A0E0,MRPL36,Translation,-0.29654,NULL
+A0E0,MRPL37,Translation,0.891151,NULL
+A0E0,MRPL38,Translation,0.085766,NULL
+A0E0,MRPL39,Translation,0.518968,NULL
+A0E0,MRPL4,Translation,0.474246,NULL
+A0E0,MRPL40,Translation,-0.920016,NULL
+A0E0,MRPL41,Translation,1.0762,NULL
+A0E0,MRPL42,Translation,-0.436056,NULL
+A0E0,MRPL43,Translation,0.727182,NULL
+A0E0,MRPL44,Translation,-0.520121,NULL
+A0E0,MRPL45,Translation,-0.875245,NULL
+A0E0,MRPL46,Translation,-0.358971,NULL
+A0E0,MRPL47,Translation,0.843668,NULL
+A0E0,MRPL48,Translation,-0.027414,NULL
+A0E0,MRPL49,Translation,0.164621,NULL
+A0E0,MRPL50,Translation,-0.898074,NULL
+A0E0,MRPL51,Translation,0.429808,NULL
+A0E0,MRPL52,Translation,-0.501369,NULL
+A0E0,MRPL54,Translation,-1.5531,NULL
+A0E0,MRPL55,Translation,1.10384,NULL
+A0E0,MRPL9,Translation,1.39874,NULL
+A0E0,MRPS10,Translation,0.383454,NULL
+A0E0,MRPS11,Translation,-0.266486,NULL
+A0E0,MRPS12,Translation,1.17854,NULL
+A0E0,MRPS14,Translation,1.23582,NULL
+A0E0,MRPS15,Translation,0.589382,NULL
+A0E0,MRPS16,Translation,0.832902,NULL
+A0E0,MRPS17,Translation,1.28775,NULL
+A0E0,MRPS18A,Translation,0.0282336,NULL
+A0E0,MRPS18B,Translation,-0.767997,NULL
+A0E0,MRPS18B,Translation,0,NULL
+A0E0,MRPS18B,Translation,0,NULL
+A0E0,MRPS18B,Translation,0,NULL
+A0E0,MRPS18B,Translation,0,NULL
+A0E0,MRPS18B,Translation,0,NULL
+A0E0,MRPS18B,Translation,0,NULL
+A0E0,MRPS18C,Translation,-0.934833,NULL
+A0E0,MRPS2,Translation,0.365849,NULL
+A0E0,MRPS21,Translation,1.2592,NULL
+A0E0,MRPS22,Translation,-0.121409,NULL
+A0E0,MRPS23,Translation,-0.596375,NULL
+A0E0,MRPS25,Translation,0.00119246,NULL
+A0E0,MRPS26,Translation,1.19462,NULL
+A0E0,MRPS27,Translation,-1.3029,NULL
+A0E0,MRPS28,Translation,-0.530516,NULL
+A0E0,MRPS30,Translation,0.0142523,NULL
+A0E0,MRPS31,Translation,-0.149198,NULL
+A0E0,MRPS33,Translation,1.00746,NULL
+A0E0,MRPS34,Translation,0.970502,NULL
+A0E0,MRPS35,Translation,0.484297,NULL
+A0E0,MRPS36,Translation,-0.975464,NULL
+A0E0,MRPS5,Translation,0.251943,NULL
+A0E0,MRPS7,Translation,-0.443639,NULL
+A0E0,MRPS9,Translation,-0.285375,NULL
+A0E0,MRRF,Translation,-0.288754,NULL
+A0E0,MTFMT,Translation,-0.342122,NULL
+A0E0,MTIF2,Translation,0.507472,NULL
+A0E0,MTIF3,Translation,-0.525572,NULL
+A0E0,MTRF1,Translation,-0.183782,NULL
+A0E0,MTRF1L,Translation,-0.213501,NULL
+A0E0,NARS2,Translation,1.19242,NULL
+A0E0,OXA1L,Translation,-0.347522,NULL
+A0E0,PARS2,Translation,0.99537,NULL
+A0E0,PET112,Translation,-0.800757,NULL
+A0E0,PHB,Translation,-0.311011,NULL
+A0E0,PHB2,Translation,0.541644,NULL
+A0E0,PTCD3,Translation,0.909646,NULL
+A0E0,QRSL1,Translation,0.34909,NULL
+A0E0,RARS2,Translation,0.1492,NULL
+A0E0,RNASEL,Translation,-0.340028,NULL
+A0E0,SARS2,Translation,0.377134,NULL
+A0E0,TACO1,Translation,-0.3321,NULL
+A0E0,TARS2,Translation,1.18439,NULL
+A0E0,TSFM,Translation,-0.192503,NULL
+A0E0,TUFM,Translation,-0.490806,chr16 28855746 C>T Missense_Mutation
+A0E0,VARS2,Translation,0,NULL
+A0E0,VARS2,Translation,0,NULL
+A0E0,VARS2,Translation,0,NULL
+A0E0,VARS2,Translation,0,NULL
+A0E0,VARS2,Translation,0,NULL
+A0E0,VARS2,Translation,0.413729,NULL
+A0E0,WARS2,Translation,-0.771091,NULL
+A0E0,YARS2,Translation,1.28658,NULL
+A0B3,ACO2,Tricarboxylic acid cycle,-0.101178,NULL
+A0B3,CS,Tricarboxylic acid cycle,0.323652,NULL
+A0B3,DLD,Tricarboxylic acid cycle,0.324,NULL
+A0B3,DLST,Tricarboxylic acid cycle,-0.00466685,NULL
+A0B3,FH,Tricarboxylic acid cycle,1.95401,NULL
+A0B3,IDH1,Tricarboxylic acid cycle,0.0749347,NULL
+A0B3,IDH2,Tricarboxylic acid cycle,2.68247,NULL
+A0B3,IDH3A,Tricarboxylic acid cycle,0.575976,NULL
+A0B3,IDH3B,Tricarboxylic acid cycle,-0.14131,NULL
+A0B3,IDH3G,Tricarboxylic acid cycle,0.841658,NULL
+A0B3,MDH2,Tricarboxylic acid cycle,1.16874,NULL
+A0B3,OGDH,Tricarboxylic acid cycle,-0.00914585,NULL
+A0B3,SDHA,Tricarboxylic acid cycle,1.03876,NULL
+A0B3,SDHB,Tricarboxylic acid cycle,0.539836,NULL
+A0B3,SDHC,Tricarboxylic acid cycle,1.94008,NULL
+A0B3,SDHD,Tricarboxylic acid cycle,-0.173025,NULL
+A0B3,SUCLA2,Tricarboxylic acid cycle,-0.490051,NULL
+A0B3,SUCLG1,Tricarboxylic acid cycle,-0.0901003,NULL
+A0B3,SUCLG2,Tricarboxylic acid cycle,-0.0939939,NULL
+A0E0,ACO2,Tricarboxylic acid cycle,0,NULL
+A0E0,CS,Tricarboxylic acid cycle,-0.323799,NULL
+A0E0,DLD,Tricarboxylic acid cycle,0.427747,NULL
+A0E0,DLST,Tricarboxylic acid cycle,-0.540072,NULL
+A0E0,FH,Tricarboxylic acid cycle,0.512626,NULL
+A0E0,IDH1,Tricarboxylic acid cycle,1.76932,NULL
+A0E0,IDH2,Tricarboxylic acid cycle,2.85971,NULL
+A0E0,IDH3A,Tricarboxylic acid cycle,1.08174,NULL
+A0E0,IDH3B,Tricarboxylic acid cycle,0.433044,NULL
+A0E0,IDH3G,Tricarboxylic acid cycle,0.226907,NULL
+A0E0,MDH2,Tricarboxylic acid cycle,0.937252,NULL
+A0E0,OGDH,Tricarboxylic acid cycle,0.448184,NULL
+A0E0,SDHA,Tricarboxylic acid cycle,-0.39019,NULL
+A0E0,SDHB,Tricarboxylic acid cycle,0.0165298,NULL
+A0E0,SDHC,Tricarboxylic acid cycle,1.12783,NULL
+A0E0,SDHD,Tricarboxylic acid cycle,0.762352,NULL
+A0E0,SUCLA2,Tricarboxylic acid cycle,-0.791866,NULL
+A0E0,SUCLG1,Tricarboxylic acid cycle,0.0950178,NULL
+A0E0,SUCLG2,Tricarboxylic acid cycle,-1.36485,NULL
+A0B3,ARG1,Urea Cycle,-inf,NULL
+A0B3,ARG2,Urea Cycle,0.336108,NULL
+A0B3,ASL,Urea Cycle,0.0950164,NULL
+A0B3,ASS1,Urea Cycle,0.737131,NULL
+A0B3,CPS1,Urea Cycle,-2.10432,NULL
+A0B3,OTC,Urea Cycle,-inf,NULL
+A0E0,ARG1,Urea Cycle,inf,NULL
+A0E0,ARG2,Urea Cycle,0.451558,NULL
+A0E0,ASL,Urea Cycle,-0.0397377,NULL
+A0E0,ASS1,Urea Cycle,1.44881,NULL
+A0E0,CPS1,Urea Cycle,-3.64969,NULL
+A0E0,OTC,Urea Cycle,0,NULL

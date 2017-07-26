@@ -1,0 +1,56 @@
+{
+  "DataType":"MunichWorkflow2",
+  "plainDescription": "Visualisation of expression of mitochondrial genes according to cancer status with Cohort Filter",
+  "longDescription":"This is an interactive visualisation tool for the display of expression status of mitochondrial genes of tumor-normal paired samples of selected cohort. It allows detailed inspection of expression data of samples and comparisons among groups of patients. Users could choose a TCGA cohort and split patients into groups according to their cancer stages. Data are displayed in a bee-swarm scatter plot according to log 2 fold change of expression level (tumor over normal), with each point corresponding to one mitochondrial gene. Users could interact with the tool to display average expression value for each gene for each group, and refine the output according to mitochondrial functions.",
+  "sourceIdentifier": "MunichWorkflow2",
+  "type" :"AAAA",  
+  "InputParameters":[
+    {
+      "identifier":"Cohort",
+      "dataType":"String",
+      "description":"The Cohort to select",
+      "predefinedValuesQuery":"Study.sourceIdentifier"
+    }
+  ],
+
+  "execWorkflows":[
+    {
+      "description":"expression of mitochondrial genes of selected cohort spliting by cancer status",
+      "outputFiles":{"viz.html":"html","Logic.js":"js","data.csv":"csv"},
+      "ExcecutionCommands":["python combine.py","Rscript munichWorkflow.R"],
+      "VerificationCommands":[],
+      "setFiles":["viz.html","munichWorkflow.R","combine.py","Logic.js"],
+      "inputData": [
+
+
+        {
+            "OutputFields":["sample","name", "meta"],
+            "parametersForQuery":{"Cohort":"Cohort"},
+            "hqlQuery":"SELECT p.sourceIdentifier,cd.exactName,cd.value FROM Patient p join p.study stud JOIN p.importInfos ii JOIN ii.infos cd WHERE cd.exactName IN ('pathologic_stage') and stud.sourceIdentifier= :Cohort",
+            "outputName":"meta.csv",
+            "name":"one",
+            "headers":true
+        },
+        {
+            "OutputFields":["sample","gene", "value"],
+            "parametersForQuery":{"Cohort":"Cohort"},
+            "hqlQuery":"select p.sourceIdentifier, tde.gene.name, tde.foldChange FROM Study stud join stud.patients p join p.samples s join s.datasets ds join ds.dataTranscriptDiffExpr tde WHERE stud.sourceIdentifier= :Cohort",
+            "outputName":"value1.csv",
+            "name":"two",
+            "headers":false
+        },
+        {
+          "OutputFields":["gene", "func"],
+          "parametersForQuery":{},
+          "hqlQuery":"select gf.gene.name as genename, gf.process from Dataset ds join ds.dataGeneticFunction gf WHERE ds.note='genes associated to mitochondria'",
+          "outputName":"value2.csv",
+          "name":"three",
+          "headers":false
+        }
+
+      ]
+    }
+
+  ]
+
+}
