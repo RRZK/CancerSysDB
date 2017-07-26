@@ -3,15 +3,16 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 cd $DIR
 echo $(ls)
 ./build.sh
-if [ ! -d "docker/OpenImage/target/" ]
+if [ ! -d "docker/openImage/target/" ]
 then
-    mkdir docker/OpenImage/target/
+    mkdir docker/openImage/target/
 fi
-cp -f target/csys-db.war docker/OpenImage/target/
+cp -f target/csys-db.war docker/openImage/target/
 cd docker/csys-mariadb
-if [ ! -d "docker/OpenImage/target/release1" ]
+if [ ! -d "release1" ]
 then
     wget http://bifacility.uni-koeln.de/cancersysdb/cancersysSQLdump.tar.gz .
     tar -xvzf cancersysSQLdump.tar.gz
     rm cancersysSQLdump.tar.gz
+    echo "SET GLOBAL innodb_lru_scan_depth=256;" > release1/AAA.sql
 fi
