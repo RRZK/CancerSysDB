@@ -80,16 +80,22 @@ class WorkflowExecutionService {
 
 
             for (String it in ew.excecutionCommands) {
+                def env = System.getenv()
+                def envlist = []
+                env.each() { k,v -> envlist.push( "$k=$v" ) }
 
                 def excec = it
                 log.debug("path: " + path)
                 log.debug("excec: " + excec)
 
                 def sout = new StringBuilder(), serr = new StringBuilder()
-                def process = excec.execute([], new File(path))
+                def process = excec.execute(envlist, new File(path))
                 //def proc = excec.execute([] ,new File(path))
                 process.consumeProcessOutput(sout, serr)
                 process.waitFor()
+
+
+
 
                 error = process.exitValue()
                 log.debug("error " + error)
