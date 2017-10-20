@@ -111,14 +111,14 @@ environments {
 
 // log4j configuration
 log4j.main = {
-/*
-    appenders {
-        file name:'file', file:'/var/logs/cancersys.log'
-    }
+
+    /*appenders {
+        file name:'file', file:'/var/log/cancersys.log'
+    }*/
     root {
         info 'stdout'
     }
-*/
+
     // Example of changing the log pattern for the default console appender:
     //
     //appenders {

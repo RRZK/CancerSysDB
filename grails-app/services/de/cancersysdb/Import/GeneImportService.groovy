@@ -524,12 +524,12 @@ class GeneImportService {
         def rest = new RestBuilder()
         //Query Biomart
         def resp
-        def Source = "biomartCentral"
+        def Source = "biomartEnsembl"
         try {
-            resp = rest.get("http://central.biomart.org/martservice?type=registry")
+            resp = rest.get("http://www.ensembl.org/biomart/martservice?type=registry")
             if (resp.status != 200) {
-                resp = rest.get("http://www.ensembl.org/biomart/martservice?type=registry")
-                Source = "biomartEnsembl"
+                resp = rest.get("http://central.biomart.org/martservice?type=registry")
+                Source = "biomartCentral"
             }
         } catch (Exception e) {
             LockRefresh = false
@@ -736,10 +736,10 @@ class GeneImportService {
             Query = BuildqueryfromFields(MainIdentifier, geneOntology)
             try {
 
-                resp = rest.get("http://central.biomart.org/martservice/results?query=" + Query + "\n")
+                resp = rest.get("http://www.ensembl.org/biomart/martservice?query=" + Query + "\n")
                 if (resp.status != 200) {
                     log.debug("Ensembl")
-                    resp = rest.get("http://www.ensembl.org/biomart/martservice?query=" + Query + "\n")
+                    resp = rest.get("http://central.biomart.org/martservice/results?query=" + Query + "\n")
                 }
             } catch (Exception e) {
 

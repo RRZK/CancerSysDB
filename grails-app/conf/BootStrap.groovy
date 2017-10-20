@@ -97,10 +97,11 @@ class BootStrap {
 
         }
         log.info( "Import Workflows")
-
+        
         workflowManagementService.createWorkflowFromJSON("CologneWorkflow")
-        workflowManagementService.createWorkflowFromJSON("MunichWorkflow")
-        workflowManagementService.createWorkflowFromJSON("MunichWorkflow2")
+        //workflowManagementService.createWorkflowFromJSON("MunichWorkflow")
+        //workflowManagementService.createWorkflowFromJSON("MunichWorkflow2")
+        workflowManagementService.createWorkflowFromJSON("MunichWorkflowNew")
         workflowManagementService.createWorkflowFromJSON("SurvivalWorkflow")
         workflowManagementService.createWorkflowFromJSON("TherapyWorkflow")
         workflowManagementService.createWorkflowFromJSON("SurvivalWorkflowWithCohort")

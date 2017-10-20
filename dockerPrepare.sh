@@ -7,7 +7,7 @@ if [ ! -d "docker/openImage/target/" ]
 then
     mkdir docker/openImage/target/
 fi
-cp -f target/csys-db.war docker/openImage/target/
+cp -f target/csys-db-pub.war docker/openImage/target/
 cd docker/csys-mariadb
 if [ ! -d "release1" ]
 then
