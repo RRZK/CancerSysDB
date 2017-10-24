@@ -64,10 +64,10 @@ class WorkflowManagementService {
     def createWorkflowFromJSON(String nameShowcase) {
         log.info(nameShowcase)
         //TODO Method to Big refactor!
-        def todel = ConceptualWorkflow.findBySourceIdentifier(nameShowcase)
+        /*def todel = ConceptualWorkflow.findBySourceIdentifier(nameShowcase)
         if (!!todel){
             delteConceptualWorkflow(todel)
-        }
+        }*/
 
         def showcaseWF = ConceptualWorkflow.findBySourceIdentifier(nameShowcase)
         
