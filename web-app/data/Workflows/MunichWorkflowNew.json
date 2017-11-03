@@ -1,7 +1,7 @@
 {
   "DataType":"MunichWorkflowNew",
-  "plainDescription": "Visualisation of expression of mitochondrial genes according to cancer status with Cohort Filter",
-  "longDescription":"This is an interactive visualisation tool for the display of expression status of mitochondrial genes of tumor-normal paired samples of selected cohort. It allows detailed inspection of expression data of samples and comparisons among groups of patients. Users could choose a TCGA cohort and split patients into groups according to their cancer stages. Data are displayed in a bee-swarm scatter plot according to log 2 fold change of expression level (tumor over normal), with each point corresponding to one mitochondrial gene. Users could interact with the tool to display average expression value for each gene for each group, and refine the output according to mitochondrial functions.",
+  "plainDescription": "Visualisation of expression of mitochondrial genes with groupings according to clinical attributes",
+  "longDescription":"This is an interactive visualisation tool for the display of expression status of mitochondrial genes of tumor-normal paired samples of selected cohort. It allows detailed inspection of expression data of samples and comparisons among groups of patients. Users could choose a TCGA cohort and split patients into groups according to various clinical attributes. Data are displayed in a bee-swarm scatter plot according to log 2 fold change of expression level (tumor over normal), with each point corresponding to one mitochondrial gene. Users could interact with the tool to display average expression value for genes of certain mitochondrial functions, and refine the output at the dashboard according to different clinical attributes.",
   "sourceIdentifier": "MunichWorkflowNew",
   "type" :"AAAA",
     "outputFilesOrder":["data.csv","viz.html","Logic.js","bootstrap.css"],

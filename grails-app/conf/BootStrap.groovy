@@ -108,7 +108,7 @@ class BootStrap {
         workflowManagementService.createWorkflowFromJSON("WorkflowCooccurance")
         workflowManagementService.createWorkflowFromJSON("WorkflowCNAsize")
         workflowManagementService.createWorkflowFromJSON("WorkflowVartypes")
-
+        
         if(GeneSymbolAlias.count() ==0)
             geneAliasImportService.ImportGeneAlias()
 

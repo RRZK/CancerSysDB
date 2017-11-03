@@ -64,23 +64,19 @@ class WorkflowManagementService {
     def createWorkflowFromJSON(String nameShowcase) {
         log.info(nameShowcase)
         //TODO Method to Big refactor!
-        /*def todel = ConceptualWorkflow.findBySourceIdentifier(nameShowcase)
-        if (!!todel){
-            delteConceptualWorkflow(todel)
-        }*/
 
         def showcaseWF = ConceptualWorkflow.findBySourceIdentifier(nameShowcase)
         
-        //log.debug( nameShowcase + " showcaseWF -> " +showcaseWF  )
+        log.debug( nameShowcase + " showcaseWF -> " +showcaseWF  )
 
         if (!showcaseWF) {
-            log.info("Importin " + nameShowcase + "  ")
+            log.debug("Importin " + nameShowcase + "  ")
             def jsonPath = grailsApplication.parentContext.getResource("").file.toString() + "/data/Workflows/" + nameShowcase + ".json"
 
-            log.info("jsonPath?" + jsonPath)
+            log.debug("jsonPath?" + jsonPath)
             JSONElement res = JSON.parse(new FileReader(jsonPath))
             
-            log.info("jsonparse")
+            log.debug("jsonparse")
             if (!res instanceof Map)
                 throw new MalformedJsonException("Base thing must be an Asociative Array")
 
@@ -100,10 +96,7 @@ class WorkflowManagementService {
             Map InputParameters = [:]
             def ip = res.get("InputParameters")
             
-            log.info("step1")
-            
             if (ip) {
-                log.info("ip")
                 if (!ip instanceof List)
                     throw new MalformedJsonException("InputParameters Must be A list of MAPs!")
 
@@ -136,8 +129,6 @@ class WorkflowManagementService {
             }
 
             //Create Executable Part of the  Workflow
-            
-            log.info("step2")
 
             cw.execWorkflows = []
             cw.save(failOnError: true,flush: true)
@@ -145,7 +136,6 @@ class WorkflowManagementService {
             print cw.errors
             def ewDesc = res.get("execWorkflows")
             if (ewDesc) {
-                log.info("ewDesc")
                 if (!ewDesc instanceof List)
                     return ["execWorkflows Must be A list of MAPs!"]
 
@@ -222,13 +212,12 @@ class WorkflowManagementService {
                 }
             }else
                 return ["No execWorkflows given"]
-            log.info("Imported Workflows from JSON finished")
+            log.debug("Imported Workflows from JSON finished")
             
             
             //Try to Import the Zipped Dependencies
             try {
-                log.info("unzip")
-                log.info("Started Importing Files")
+                log.debug("Started Importing Files")
 
                 def zup = grailsApplication.parentContext.getResource("").file.toString() + "/data/Workflows/" + nameShowcase + ".zip"
                 def MasterPath = grailsApplication.getConfig().cancersys.config.dataFilepath.toString() + "/WorkflowMasters"
@@ -236,7 +225,6 @@ class WorkflowManagementService {
                 File tempf = new File(MasterPath + "/" + nameShowcase + "/")
                 if (!tempf.exists()){
                     tempf.mkdir()
-                    log.info("make dir")
                 }
                     
 
@@ -271,9 +259,7 @@ class WorkflowManagementService {
             }
         }
         else{
-            log.info("There allready is the showcaseWF : "+ showcaseWF.toString())
-            //return ["There allready is the showcaseWF : "+ showcaseWF.toString()]
-            //return ["return"]
+            log.info("There already is the showcaseWF : "+ showcaseWF.toString())
         }
     }
 
@@ -429,8 +415,6 @@ class WorkflowManagementService {
         }
 
         cw.delete()
-        
-        log.info("deleted")
 
     }
 }
