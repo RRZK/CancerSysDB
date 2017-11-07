@@ -55,10 +55,10 @@ Map outputFiles--}%
         <div id="ResultFileContainer${counter}" style="margin-top: 5rem">
 
         <g:if test="${value.endsWith("html")}">
-            <iframe frameborder="0" style="width:1000px;height:650px;-ms-zoom: 0.9; -moz-transform: scale(0.9); -moz-transform-origin: 0 0; -o-transform: scale(0.9); -o-transform-origin: 0 0; -webkit-transform: scale(0.9); -webkit-transform-origin: 0 0;"
-                    src="${createLink(absolute: true, controller: "showcase", action: " ") + "/displayResultfile/" + processedWorkflow.uuid + "/" + key}"></iframe>
             <a href="${createLink(absolute: true, controller: "showcase", action: " ") + "/displayResultfile/" + processedWorkflow.uuid + "/" + key}"
                target="_blank">Open in Window</a>
+            <iframe frameborder="0" style="width:1000px;height:650px;-ms-zoom: 0.9; -moz-transform: scale(0.9); -moz-transform-origin: 0 0; -o-transform: scale(0.9); -o-transform-origin: 0 0; -webkit-transform: scale(0.9); -webkit-transform-origin: 0 0;"
+                    src="${createLink(absolute: true, controller: "showcase", action: " ") + "/displayResultfile/" + processedWorkflow.uuid + "/" + key}"></iframe>
         </g:if>
         <g:elseif test="${value.endsWith("htmlsnippet")}">
 
