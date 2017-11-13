@@ -28,55 +28,55 @@ By using data from The Cancer Genome Atlas (TCGA) through the CancerSysDB, you o
 ### Requirements
 Install Grails 2.5.5 - download from https://grails.org/ or install with SDKMan .
 
-A Database: MariaDB/MySQL(Strongly recommended!). GORM Framework SHOULD make it Datbase Independent but this isnt tested.
+A database: MariaDB/MySQL (strongly recommended). GORM framework should make it database-independent, but this has not been tested.
 
 Run command "grails war" to build a WAR file.
 
-### Modes (Private/Public)
+### Modes (private/public)
 
-The Database has two Modes:
+The database has two modes:
  
-The Private mode (Standard): To do anything (run workflows) you have to be logged in.
+The private mode (standard): To do anything (run workflows), you have to be logged in.
  
-The Public mode: Here the Database operates as open portal like on https://cancersys.uni-koeln.de/ . Workflows can be run whiout login.
+The public mode: Here, the database operates as an open portal like on https://cancersys.uni-koeln.de/ . Workflows can be run without login.
 
 ### Docker
 
-Execute the Commands:
+Execute the commands:
 
     ./InstallDockerCompose.sh
     ./RunDockerCompose.sh
 
 #### Requirements
-Run Docker image or Docker Compose to get a test instance. This will create an Docker Enviroment were the App is running on the First and the Database in  annother container.
+Run Docker image or Docker Compose to get a test instance. This will create a Docker enviroment where the app is running on the first and the database in another container.
 
 You need to install [docker](https://www.docker.com/) and [docker-compose](https://docs.docker.com/compose/). 
 
-On Ubuntu you can easily install it with apt: 
+On Ubuntu, you can easily install these with apt: 
 
     apt-get install docker docker-compose
 
 
-The process will consume alot (<4GB) diskspace and alot of time and Bandwith.
+The process will consume a lot of diskspace (<4GB) and a lot of time and bandwidth.
 
 
 #### Details
 
-[dockerPrepare.sh](dockerPrepare.sh) Builds the Application, Downloads the Data and preparse it tobe parsed by the mariadb Docker Container
+[dockerPrepare.sh](dockerPrepare.sh) Builds the application, downloads the data and prepares it to be parsed by the MariaDB Docker container.
 
-[InstallDockerCompose.sh](InstallDockerCompose.sh)  calles dockerPrepare.sh and builds image for docker compose.
+[InstallDockerCompose.sh](InstallDockerCompose.sh) Calls dockerPrepare.sh and builds image for Docker Compose.
 
-[RunDockerCompose.sh](RunDockerCompose.sh)  calls docker-compose
+[RunDockerCompose.sh](RunDockerCompose.sh) Calls docker-compose.
 
 [docker-compose docker/docker-compose](docker/docker-compose) 
 
 ### Manual Build
 
-These are the Instructions to integrate and Configurate the Database tobe run in an Application container like tomcat.
+These are the instructions to integrate and configurate the database to be run in an application container like Tomcat.
 
 #### Configuration (Database)
 
-Before building the Application you can configure:
+Before building the application, you can configure:
 
 [Config.groovy](grails-app/conf/Config.groovy)
 
@@ -84,30 +84,30 @@ and
 
 [DataSource.groovy](grails-app/conf/DataSource.groovy)
 
-or use an External Config file afterwards: Therefor you can Combine both Files into one file with the Name :
+or use an external config file afterwards. Therefore, you can combine both files into one file named
 
 /etc/opt/grails/csys-db-config.groovy
 
-for an example see docker [csys-db-config.groovy](docker/openImage/csys-db-config.groovy)
+For an example, see Docker [csys-db-config.groovy](docker/openImage/csys-db-config.groovy)
 
 ###### DataSource
-Here you can add your Database Configuration by Enviroment. For Deployment the procution enviroment is critical.
+Here you can add your database configuration by enviroment. For deployment, the production environment is critical.
 
-The supplied File should give you a Clue where to put your Database Information.
+The supplied file should give you a clue where to put your database information.
 
-See the [grails Documentation](http://docs.grails.org/2.5.x/guide/single.html#dataSource) for futher Information.
+See the [grails Documentation](http://docs.grails.org/2.5.x/guide/single.html#dataSource) for further information.
 
 ###### Config
 
-Set the Variable 
+Set the variable 
 
     cancersys.config.systemType
     
-to Public to Run the Database in Public mode like https://cancersys.uni-koeln.de/
+to public to run the database in public mode like https://cancersys.uni-koeln.de/
 
     cancersys.config.systemType = "public"
 
-Also the Paths where the Data is Stored can be set
+Also, the paths where the data is stored can be set
 
 Standard:
 
@@ -115,14 +115,14 @@ Standard:
         cancersys.config.tempFilepath = "/srv/cancersys/ImportedFiles/"
         cancersys.config.dataFilepath = "/srv/cancersys/Data/"
 
-_cancersys.config.tempFilepath_ sets the Temporary folder for Uploaded Files
+_cancersys.config.tempFilepath_ sets the temporary folder for uploaded files
 
-_cancersys.config.dataFilepath_ sets the path where executed Workflows are Saved.
+_cancersys.config.dataFilepath_ sets the path where executed workflows are saved.
 
 
 #### Auto Build
 
-There is the [build.sh](build.sh) which installs SDKman and grails an then builds the project war file.
+There is the [build.sh](build.sh) which installs SDKman and Grails and then builds the project WAR file.
 
 
 
@@ -136,7 +136,7 @@ First login is:
     User: Admin
     Password: AdminPassword
 
-After the first login, the password has to be changed! The next step is to upload the data to the database. It is recommended to create a new user for upload.
+After the first login, the password has to be changed! The next step is to upload the data into the database. It is recommended to create a new user for upload.
 
 ### Important folders
 
@@ -147,25 +147,25 @@ All data used by the application will go to /srv/cancersys . Please mount this f
 
 As mentioned before, the workflows are in the folder [web-app/data/Workflows](web-app/data/Workflows).
 
-To create your own workflow look at the [Workflow Tutorials](web-app/data/Workflows/Readme.md)
+To create your own workflow, look at the [Workflow Tutorials](web-app/data/Workflows/Readme.md)
 ## Data
 
-Without Data the Project does not work. 
-When starting the App with an Clean Gene Data is downloaded from biomart.
-By Standard the Public TCGA Data is incorporated into the Database.
+Without data, the entire application will not work. 
+When starting, the app with clean gene data is downloaded from BioMart.
+By default, the public TCGA data is incorporated into the database.
 
 ### SQL Dump
 
-There is an SQL Dump at
+There is an SQL dump at
 
 http://bifacility.uni-koeln.de/cancersysdb/cancersysSQLdump.tar.gz
 
-It has an admin User:
+It has an admin user:
     
     User: Admin
     Password: AdminPassword
     
-and a User which uploaded the Data and is owner of the Data:
+and a user which uploaded the data and is the owner of the data:
 
     User: User
     Password: UserPassword
@@ -182,11 +182,11 @@ The data can be uploaded with the scripts in [Scripts](web-app/Tools). You can u
 
 This will take a lot of time.
 
-if you just want to test  Upload functionality
+If you just want to test the upload functionality,
  
 http://bifacility.uni-koeln.de/cancersysdb/tcgaSample.tar.gz
 
-contains a Subsample for Testing reasons.
+contains a subsample for testing purposes.
 
 ### Upload scripts
 
@@ -198,7 +198,7 @@ This script uses UploadScript (parameter -s) and has three stages.
     
 * Scanning the folders for meta.json files and upload these. If sample and patient identifiers not created in step 1 are used in these files, they will be created from the context information in the meta.json files.
 
-* Scanning all folders for files with the extension .maf and upload them as DataVariation data. In the files, only the lines which contain samples known to the database are processed (see step 1 XML patient data).
+* Scanning all folders for files with the extension .maf and upload them as DataVariation data. In these files, only the lines which contain samples known to the database are processed (see step 1 XML patient data).
 
 
 #### Upload metadata file description
@@ -210,9 +210,9 @@ To upload files with the script [DirectoryUpload.py](web-app/Tools/DirectoryUplo
  
 The structure of the JSON file consists of two fields:
 
-General: contains map with information working for all files in this directory
+General: Contains map with information working for all files in this directory.
 
-Special: exceptions for single files in this folder. The file names are the keys of the underlying map.
+Special: Exceptions for single files in this folder. The file names are the keys of the underlying map.
 
 
 <pre>
@@ -244,8 +244,7 @@ Special: exceptions for single files in this folder. The file names are the keys
 
 
 
-##### General/special attribues
-
+##### General/special attributes
 
 |Attribute|Description|
 |----|----|
@@ -263,7 +262,6 @@ Special: exceptions for single files in this folder. The file names are the keys
 ##### Contexts 
 
 Array of objects, describing samples to be linked to the dataset. If the explicit information identifier already exists, all data will be ignored and the existing data will be used.
-
 
 |Attribute|Description|
 |----|----|
@@ -326,109 +324,106 @@ In this folder, there is a CSV file which describes generic functions of genes. 
 </pre></code>
 
 ## Extending the Database
-This part defines how the Database can be costumized to fit special Needs!
+This part defines how the database can be costumized to fit special needs!
 
 
 ### Extending Data Types
 
+Data types in the CancerSysDB are defined by [Grails Domain Classes](http://docs.grails.org/2.5.x/ref/Domain%20Classes/Usage.html).
+The data types can be extended without touching other code (except for the [dataset class](grails-app/domain/de/cancersysdb/Dataset.groovy)).
 
-Dataypes in Cancersys are defined by [Grails Domain Classes](http://docs.grails.org/2.5.x/ref/Domain%20Classes/Usage.html).
-The Datatypes can be extended without touching other code (except for the [dataset class](grails-app/domain/de/cancersysdb/Dataset.groovy)).
+All data types are attached to datasets which
 
-All Data types are Attached to Datasets which
+* define which data is associated into a dataset,
+* restrict the access,
+* define contexts like samples, descriptions and file origins.
 
-* Define which data is asociated into a dataSET
-* Restrict the access
-* Define Contexts like Samples, Descriptions and File Origins.
+All data types are organized in the package _[de.cancersys.data](grails-app/domain/de/cancersysdb/data)_
 
-All Data Types are Organized in the Package _[de.cancersys.data](grails-app/domain/de/cancersysdb/data)_
+This package creates a base for classes that hold data.
 
-This Package Creates a Base for Classes That Hold Data This Data.
+All classes in this package start with the keyword " _Data_ "
 
-All classes in this Package start with the Keyword " _Data_ "
+There are three types of classes:
 
-There are three Types of Classes:
+##### General data class
 
-##### general Dataclass
+They need to implement the _DataEntryInterface_ . This interface just manages the requirement that a dataset is referenced.
 
-They need to Implement the _DataEntryInterface_ This interface just manages the Requirement that a Dataset is referenced.
+##### Annotation data class
 
-##### Annotation Dataclass
+These annotations define, for instance, associations to genes. They can be handled by the generic CSV importer.
 
-These Annotations define asociations to genes for example. They can be handled by the generic CSV importer.
+##### Group data class
 
-##### Group Dataclass
-
-These Classes Assembe groups of Datasets.
+These classes assemble groups of datasets.
 
 
-#### Dataclass Attributes
+#### Data class attributes
 
-Dataclasses are Normal Grails Domain Objects. They can be Modelled like those.
+Data classes are normal Grails Domain Objects and can be modelled like those.
 
-All normal Java Datatypes are supported(like Long,Integer,Float String etc.). [Gene](grails-app/domain/de/cancersysdb/geneticStandards/Gene.groovy) Datatype can be used as References in Domain classes. The Automatic Importers will Handle and Match thus Data. 
+All normal Java data types are supported (like Long,Integer,Float String etc.). [Gene](grails-app/domain/de/cancersysdb/geneticStandards/Gene.groovy) Data types can be used as references in domain classes. The automatic importers will handle and match thus data. 
 
-#### Optional Fields
+#### Optional fields
 
-To add an Optional Field in a Dataset, use the standard GORM Constraint _nullable_ . This will make Fields optional and will also be evaluated while importing CSV Files.
+To add an optional field in a dataset, use the standard GORM constraint _nullable_ . This will make fields optional and will also be evaluated while importing CSV Files.
 
-#### Useful Interfaces
+#### Useful interfaces
 
-There are Interfaces which help to Normalize Functions: 
+There are interfaces which help to normalize functions: 
 
-_GenPosInterface_ defines a Position in the Genome. 
+_GenPosInterface_ defines a position in the genome. 
 
-SingleLineDataset defines that there is just one Line in the Dataset. 
+SingleLineDataset defines that there is just one line in the dataset. 
  
-BinaryDataDataset defines that there is Binary Data in the Dataset.
+BinaryDataDataset defines that there is Binary Data in the dataset.
 
 ###Extending Import capabilities
 
-Imports can be Managed in multiple ways,
-Since the Most Files in Genertics are CSV File Formats which present alot of Variation in the Column Values. External CSV Data can be Mapped to The Internal Datarepresentation. For Formats like vcf etc, special Importers must be written.
+Imports can be managed in multiple ways since most files in genomics are CSV file formats presenting a lot of variation in the column values. External CSV data can be mapped to the internal data representation. For formats like VCF, special importers must be written.
 
+Single CSV files where the column headers cannot be mapped automatically to the internal database formats must be mapped manually. After choosing an internal destination and a file to upload, a dialog is shown where the file columns can be mapped to internal fields. Optional values can be left out by choosing the value DO NOT MAP.
 
-Single csv files where the Column headers cant be Mapped automatically to the Internal Database Formats must be mapped manualy. After Choosing an Internal Destination and a file to Upload, a Dialog is shown where the Files columns can be Mapped to Internal Fields. Optionolal Values canbe left out by choosing the Value, DO NOT MAP
+#### Automated imports
 
-#### Automated Imports
-
-Automated Directory Imports per directory Upload script. here a CSV Based description, correspontig to the Single File Upload can be described in the mapping section of a meta.json Upload Description.
+Automated directory imports per directory upload script. Here, a CSV-based description, corresponding to the single file upload can be described in the mapping section of a meta.json upload description.
 
 #### Special importers
 
-From a technical Perspective there are basically two ways to Import datasets into the Database:
+From a technical perspective, there are basically two ways to import datasets into the database:
 
-Generic CSV Imports These Imports are Managed by the Class [de.cancersys.Import.GenericCSVImporterService](grails-app/services/de/cancersysdb/Import/GenericCSVImporterService.groovy) . This class uses a Mapping to Map the External File to the Internal Datamodell. Therefore all the required Fields in the Internal Datamodell must be present in the External Datamodell.
+Generic CSV imports: these imports are managed by the class [de.cancersys.Import.GenericCSVImporterService](grails-app/services/de/cancersysdb/Import/GenericCSVImporterService.groovy) which uses a mapping to map the external file to the internal data model. Thus, all the required fields in the internal data model must be present in the external data model.
 
-Special Imports For Formats like vcf etc, special Importers must be written. Those are Managed by the [FileImportService](grails-app/services/de/cancersysdb/Import/FileImportService.groovy). This Services Manages as the Importers implementing [ImporterServiceInterface](src/groovy/de/cancersysdb/ImportTools/ImporterServiceInterface.groovy). Examples are found in the [Package de.cancersys.Importers](grails-app/services/de/cancersysdb/Importer)
+Special imports for formats like VCF: special importers must be written. Those are managed by the [FileImportService](grails-app/services/de/cancersysdb/Import/FileImportService.groovy). This service manages as the importers implementing [ImporterServiceInterface](src/groovy/de/cancersysdb/ImportTools/ImporterServiceInterface.groovy). Examples are given in the [Package de.cancersys.Importers](grails-app/services/de/cancersysdb/Importer)
 <pre><code class="groovy">
 /**
- * This Interface Defines Input Functions and Static Variable Arrays Which Define what an ImporterService Class can transform to the Database!
+ * This interface defines input functions and static variable arrays which define what an ImporterService class can transform to the database!
  */
 interface ImporterServiceInterface {
     /**
-     * This Variable Contains Datatypes as Keys and Target Classes as Lists.
-     * This can be read so The best importer for a Task can be found.
+     * This variable contains data types as keys and target classes as lists.
+     * This can be read so the best importer for a task can be found.
      */
     static Map<String,List> MapsTo
     /**
-     * This Map Contains the Matiching Patterns for the Maps to Defined File Types.
-     * This can either contain Possible File Name Ends or a Lot of Regex Patterns to match The Filename
-     * A Regexpattern will allways be choosen with Higher Priority while determiting an suitable importerService
+     * This map contains the matching patterns for the maps to defined file types.
+     * This can either contain possible file name ends or a lot of regex patterns to match the filename.
+     * A regex pattern will always be chosen with higher priority while determining a suitable importerService
      */
     static Map<String,List> FilenamePattern
     /**
-     * This is the Main Function which hastobe Implemented to Parse Stuff into the Database
-     * @param format The Format of The File
-     * @param Into The Table this Parses into
-     * @param File The file with Content as String or Stream
-     * @param sourceFile The Source file Meta Description form the Database
-     * @param owner The Owner
-     * @param annon Is it Annonmyzed
-     * @param shared is it Shared
-     * @param ip The Import Protocoll
-     * @param ds The Dataset to import the Stuff to
-     * @return Import protocoll with the Successstatus etc
+     * This is the main function which has to be implemented to parse data into the database
+     * @param format The format of the file
+     * @param Into The table this parses into
+     * @param File The file with content as string or stream
+     * @param sourceFile The source file meta description from the database
+     * @param owner The owner
+     * @param annon Is it anonymzed?
+     * @param shared Is it shared?
+     * @param ip The import protocoll
+     * @param ds The dataset to import the data to
+     * @return Import protocol with the success status etc.
      */
     ImportProtocol importContent(String format, String Into,
             def File, SourceFile sourceFile, User owner, boolean annon, boolean shared, ImportProtocol ip, Dataset ds)
@@ -438,11 +433,11 @@ interface ImporterServiceInterface {
 }
 </pre></code>
 
-##### Importer Calling Hierarchy
+##### Importer calling hierarchy
 
-The [FileImportService](grails-app/services/de/cancersysdb/Import/FileImportService.groovy) tries to find a Special Importer for a File name pattern.
-If The internal Description works then the Importer is used to Import the Dataset.
-If the Import is not Successful then the Generic CSV Importer is Used.
+The [FileImportService](grails-app/services/de/cancersysdb/Import/FileImportService.groovy) tries to find a Special Importer for a file name pattern.
+If the internal description works, then the importer is used to import the Dataset.
+If the import is not successful, the generic CSV importer is used.
 
 # Contact
 
