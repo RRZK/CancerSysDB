@@ -26,23 +26,23 @@ The code examples are based on the analysis workflow "Gene expression depending 
 
 ### List of workflows
 
-[CologneWorkflow.json](CologneWorkflow.json)
+CologneWorkflow [description](CologneWorkflow.json) [sources](CologneWorkflow.zip)
 
-[MunichWorkflow.json](MunichWorkflow.json)
+MunichWorkflow [description](MunichWorkflow.json) [sources](MunichWorkflow.zip)
 
-[MunichWorkflow2.json](MunichWorkflow2.json)
+MunichWorkflow2 [description](MunichWorkflow2.json) [sources](MunichWorkflow2.zip)
 
-[SurvivalWorkflow.json](SurvivalWorkflow.json)
+SurvivalWorkflow[description](SurvivalWorkflow.json) [sources](SurvivalWorkflow.zip)
 
-[SurvivalWorkflowWithCohort.json](SurvivalWorkflowWithCohort.json)
+SurvivalWorkflow With Cohorts [description](SurvivalWorkflowWithCohort.json) [sources](SurvivalWorkflowWithCohort.zip)
 
-[TherapyWorkflow.json](TherapyWorkflow.json)
+TherapyWorkflow [description](TherapyWorkflow.json) [sources](TherapyWorkflow.zip)
 
-[WorkflowCNAsize.json](WorkflowCNAsize.json)
+WorkflowCNAsize [description](WorkflowCNAsize.json) [sources](WorkflowCNAsize.zip)
 
-[WorkflowCooccurance.json](WorkflowCooccurance.json)
+WorkflowCooccurance [description](WorkflowCooccurance.json) [sources](WorkflowCooccurance.zip)
 
-[WorkflowVartypes.json](WorkflowVartypes.json)
+WorkflowVartypes [description](WorkflowVartypes.json) [sources](WorkflowVartypes.zip)
 
 
 ### Workflow Description
@@ -280,7 +280,7 @@ All the values follow the [TCGA vocabulary](https://gdc.cancer.gov/resources-tcg
 All the values follow the [TCGA vocabulary](https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/sample-type-codes) except for code which is the SNOMED ID.
 
 
-####Joining the data 
+#### Joining the data 
 
 Here is an example how the database can be queried. If you use it, please costumize <i>Data</i> with the data you want to access from the molecular data. The documentation on molecular data types helps you to find the correct data type and the fields provided by the data types.
         ![Query Diagram](../../../grails-app/assets/images/tutorial/QueryGraphExample2.svg)
